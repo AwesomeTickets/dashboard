@@ -13,7 +13,7 @@
 ## Iteration #1
 
 - 需求分析：[需求文档][backlog]
-- 概要设计 & 详细设计：in progress
+- 概要设计 & 详细设计：[数据库][DB_iter1] [API][api]
 - 编码 & 测试：
     - 前端：waiting
     - 后端：waiting
@@ -35,6 +35,8 @@
     - 后端：完成[课程网站][course_website]的 Spring 4 技术准备；熟悉[后端源码][server_source]结构
 
 
+[DB_iter1]:        ./img/DB_iter1.png
+[api]:             ./doc/api.md
 [course_website]:  http://ss.sysu.edu.cn/~pml/se305/x_Team_ticket.html
 [client_source]:   https://github.com/AwesomeTickets/Tickets-Client
 [server_source]:   https://github.com/AwesomeTickets/Tickets-Server
