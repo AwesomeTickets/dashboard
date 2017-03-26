@@ -15,8 +15,8 @@
 - 需求分析：[需求文档][backlog]
 - 概要设计 & 详细设计：[数据库][DB_iter1] [API][api]
 - 编码 & 测试：
-    - 前端：waiting
-    - 后端：waiting
+    - 前端：in progress
+    - 后端：in progress
 
 ### Week #1 (03/13/2017)
 
