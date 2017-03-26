@@ -35,7 +35,7 @@
     - 后端：完成[课程网站][course_website]的 Spring 4 技术准备；熟悉[后端源码][server_source]结构
 
 
-[DB_iter1]:        ./img/DB_iter1.png
+[DB_iter1]:        https://raw.githubusercontent.com/AwesomeTickets/Dashboard/master/img/DB_iter1.png
 [api]:             ./doc/api.md
 [course_website]:  http://ss.sysu.edu.cn/~pml/se305/x_Team_ticket.html
 [client_source]:   https://github.com/AwesomeTickets/Tickets-Client
