@@ -34,6 +34,14 @@
     - 前端：熟悉[前端源码][client_source]结构
     - 后端：完成[课程网站][course_website]的 Spring 4 技术准备；熟悉[后端源码][server_source]结构
 
+### Week #3 (03/26/2017)
+
+- 需求分析：无
+- 概要设计 & 详细设计：完善设计
+- 编码 & 测试：
+    - 前端：首页原型开发
+    - 后端：数据库以及 Web 接口开发
+
 
 [DB_iter1]:        https://raw.githubusercontent.com/AwesomeTickets/Dashboard/master/img/DB_iter1.png
 [api]:             ./doc/api.md
