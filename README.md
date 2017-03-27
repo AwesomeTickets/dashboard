@@ -15,7 +15,7 @@
 - 需求分析：[需求文档][backlog]
 - 概要设计 & 详细设计：[数据库][DB_iter1] [API][api]
 - 编码 & 测试：
-    - 前端：in progress
+    - 前端：[UI规范][ui_specification] [UI更新日志][ui_updates_log]
     - 后端：in progress
 
 ### Week #1 (03/13/2017)
@@ -42,11 +42,12 @@
     - 前端：首页原型开发
     - 后端：数据库以及 Web 接口开发
 
-
-[DB_iter1]:        https://raw.githubusercontent.com/AwesomeTickets/Dashboard/master/img/DB_iter1.png
-[api]:             ./doc/api.md
-[course_website]:  http://ss.sysu.edu.cn/~pml/se305/x_Team_ticket.html
-[client_source]:   https://github.com/AwesomeTickets/Tickets-Client
-[server_source]:   https://github.com/AwesomeTickets/Tickets-Server
-[backlog]:         ./doc/backlog.md
-[GitHub_Tutorial]: http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+[ui_updates_log]:   ./doc/ui_updates_log.md
+[ui_specification]: ./doc/ui_specification.md
+[DB_iter1]:         https://raw.githubusercontent.com/AwesomeTickets/Dashboard/master/img/DB_iter1.png
+[api]:              ./doc/api.md
+[course_website]:   http://ss.sysu.edu.cn/~pml/se305/x_Team_ticket.html
+[client_source]:    https://github.com/AwesomeTickets/Tickets-Client
+[server_source]:    https://github.com/AwesomeTickets/Tickets-Server
+[backlog]:          ./doc/backlog.md
+[GitHub_Tutorial]:  http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
