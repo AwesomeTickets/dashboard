@@ -12,11 +12,13 @@
 
 ## Iteration #1
 
-- 需求分析：[需求文档][backlog]
-- 概要设计 & 详细设计：[数据库][DB_iter1] [API][api]
-- 编码 & 测试：
-    - 前端：[UI规范][ui_specification] [UI更新日志][ui_updates_log]
-    - 后端：in progress
+### Docs
+
+- [需求文档][backlog]
+- [数据库设计][DB_iter1]
+- [Web 服务接口][api] 
+- [UI 规范][ui_specification] 
+- [UI 更新日志][ui_updates_log]
 
 ### Week #1 (03/13/2017)
 
