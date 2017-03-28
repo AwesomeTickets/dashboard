@@ -19,7 +19,7 @@
 - [Web 服务接口][api] 
 - [UI 规范][ui_specification] 
 - [UI 更新日志][ui_updates_log]
-- [UI 资源](https://pan.baidu.com/s/1geHdB8J) 密码: c6uh
+- [UI 资源](https://pan.baidu.com/s/1i55K49v) 密码: f7az
 
 ### Week #1 (03/13/2017)
 
