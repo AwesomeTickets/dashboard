@@ -52,7 +52,7 @@ Response Example:
 
 ```json
 {
-    "id": "170458",
+    "id": 170458,
     "title": "美女与野兽",
     "pubdate": "2017-03-17",
     "length": 130,
