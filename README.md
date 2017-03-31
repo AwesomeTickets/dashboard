@@ -16,10 +16,10 @@
 
 - [需求文档][backlog]
 - [数据库设计][DB_iter1]
-- [Web 服务接口][api] 
+- [Web API][api] 
 - [UI 规范][ui_specification] 
-- [UI 更新日志][ui_updates_log]
 - [UI 资源](https://pan.baidu.com/s/1o8qbm22) 密码: ke4m
+- [UI 更新日志][ui_updates_log]
 
 ### Week #1 (03/13/2017)
 
