@@ -57,8 +57,8 @@ Response Example:
     "pubdate": "2017-03-17",
     "length": 130,
     "rating": 8.2,
-    "posterSmall": "http://120.25.76.106:8080/poster/small/1.jpg",
-    "posterLarge": "http://120.25.76.106:8080/poster/large/1.png",
+    "posterSmall": "http://123.123.123.123/AAA.png",
+    "posterLarge": "http://123.123.123.123/BBB.png",
     "country": "美国",
     "movieStatus": "on",
     "movieType": "3D",
@@ -146,15 +146,15 @@ Response Example:
     "subjects": [
         {
             "id": 1,
-            "posterURL": "http://120.25.76.106:8080/poster/large/1.png"
+            "posterURL": "http://123.123.123.123/XXX.png"
         },
         {
             "id": 2,
-            "posterURL": "http://120.25.76.106:8080/poster/large/2.png"
+            "posterURL": "http://123.123.123.123/YYY.png"
         },
         {
             "id": 3,
-            "posterURL": "http://120.25.76.106:8080/poster/large/3.png"
+            "posterURL": "http://123.123.123.123/ZZZ.png"
         }
     ]
 }
