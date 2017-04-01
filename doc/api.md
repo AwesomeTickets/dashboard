@@ -41,12 +41,12 @@ Response Properties:
 |pubdate|上映日期（年/月/日）|string|
 |length|时长（分钟）|int|
 |rating|评分|float|
-|posterSmall|海报（小尺寸）URL|string|
-|posterLarge|海报（大尺寸）URL|string|
 |country|制片国家|string|
 |movieStatus|上映状态（正在上映->"on"，即将上映->"soon"）|string|
 |movieType|类型（"2D"，"3D"，"3D IMAX"）|string|
 |movieStyle|题材|string array|
+|posterSmall|海报（小尺寸）URL|string|
+|posterLarge|海报（大尺寸）URL|string|
 
 Response Example:
 
@@ -57,12 +57,12 @@ Response Example:
     "pubdate": "2017-03-17",
     "length": 130,
     "rating": 8.2,
-    "posterSmall": "http://123.123.123.123/AAA.png",
-    "posterLarge": "http://123.123.123.123/BBB.png",
     "country": "美国",
     "movieStatus": "on",
     "movieType": "3D",
-    "movieStyle": ["爱情", "奇幻", "歌舞"]
+    "movieStyle": ["爱情", "奇幻", "歌舞"],
+    "posterSmall": "http://123.123.123.123/AAA.png",
+    "posterLarge": "http://123.123.123.123/BBB.png"
 }
 ```
 
