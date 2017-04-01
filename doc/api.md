@@ -136,25 +136,25 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |count|海报数量|int|
-|subjects|（电影id，海报链接）二元组数组|array|
+|posters|（电影id，海报链接）二元组数组|array|
 
 Response Example:
 
 ```json
 {
     "count": 3,
-    "subjects": [
+    "posters": [
         {
             "id": 1,
-            "posterURL": "http://123.123.123.123/XXX.png"
+            "uri": "http://123.123.123.123/XXX.png"
         },
         {
             "id": 2,
-            "posterURL": "http://123.123.123.123/YYY.png"
+            "uri": "http://123.123.123.123/YYY.png"
         },
         {
             "id": 3,
-            "posterURL": "http://123.123.123.123/ZZZ.png"
+            "uri": "http://123.123.123.123/ZZZ.png"
         }
     ]
 }
