@@ -15,7 +15,7 @@
 ### Docs
 
 - [需求文档][backlog]
-- [数据库设计][DB_iter1]
+- [数据库设计][db]
 - [Web API][api] 
 - [UI 规范][ui_specification] 
 - [UI 资源](https://pan.baidu.com/s/1o8qbm22) 密码: ke4m
@@ -37,7 +37,7 @@
     - 前端：熟悉[前端源码][client_source]结构
     - 后端：完成[课程网站][course_website]的 Spring 4 技术准备；熟悉[后端源码][server_source]结构
 
-### Week #3 (03/26/2017)
+### Week #3 (03/27/2017)
 
 - 需求分析：无
 - 概要设计 & 详细设计：完善设计
@@ -45,9 +45,17 @@
     - 前端：首页原型开发
     - 后端：数据库以及 Web 接口开发
 
+### Week #4 (04/03/2017)
+
+- 需求分析：确定下一轮迭代的需求
+- 概要设计 & 详细设计：确定下一轮迭代的 Web 接口以及数据库设计
+- 编码 & 测试：
+    - 前端：结束首页原型开发
+    - 后端：结束本次迭代数据库以及 Web 接口开发
+
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
-[DB_iter1]:         https://raw.githubusercontent.com/AwesomeTickets/Dashboard/master/img/DB_iter1.png
+[db]:               https://raw.githubusercontent.com/AwesomeTickets/Dashboard/master/img/db.png
 [api]:              ./doc/api.md
 [course_website]:   http://ss.sysu.edu.cn/~pml/se305/x_Team_ticket.html
 [client_source]:    https://github.com/AwesomeTickets/Tickets-Client
