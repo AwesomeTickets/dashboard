@@ -10,16 +10,17 @@
     - 前端：LW, HW, CYX, PJJ
     - 后端：WYF, LSL, LCY
 
-## Iteration #1
-
-### Docs
+## Docs
 
 - [需求文档][backlog]
 - [数据库设计][db]
 - [Web API][api] 
 - [UI 规范][ui_specification] 
-- [UI 资源](https://pan.baidu.com/s/1o8qbm22) 密码: ke4m
 - [UI 更新日志][ui_updates_log]
+
+## Iteration #1
+
+- [UI 资源](https://pan.baidu.com/s/1o8qbm22) 密码: ke4m
 
 ### Week #1 (03/13/2017)
 
