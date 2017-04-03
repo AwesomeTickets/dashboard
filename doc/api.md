@@ -80,14 +80,14 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |count|电影数量|int|
-|movies|电影 id 数组|int array|
+|data|电影 id 数组|int array|
 
 Response Example:
 
 ```json
 {
     "count": 9,
-    "movies": [1, 4, 5, 8, 9, 10, 11, 15, 16]
+    "data": [1, 4, 5, 8, 9, 10, 11, 15, 16]
 }
 ```
 
@@ -105,14 +105,14 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |count|电影数量|int|
-|movies|电影 id 数组|int array|
+|data|电影 id 数组|int array|
 
 Response Example:
 
 ```json
 {
     "count": 9,
-    "movies": [2, 3, 6, 7, 12, 13, 14, 17, 18]
+    "data": [2, 3, 6, 7, 12, 13, 14, 17, 18]
 }
 ```
 
@@ -136,14 +136,14 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |count|海报数量|int|
-|posters|（电影id，海报链接）二元组数组|array|
+|data|（电影id，海报链接）二元组数组|array|
 
 Response Example:
 
 ```json
 {
     "count": 3,
-    "posters": [
+    "data": [
         {
             "id": 1,
             "uri": "http://123.123.123.123/XXX.png"
