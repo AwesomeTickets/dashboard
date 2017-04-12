@@ -44,7 +44,7 @@ AwesomeTickets API 通过 HTTP Status Code 来说明 API 请求是否成功，�
 Request URI:
 
 ```
-GET /resource/movie/:id
+GET /resource/movie/:movieID
 ```
 
 Response Properties:
@@ -95,7 +95,7 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |count|电影数量|int|
-|data|电影 id 数组|int array|
+|data|movieID 集合|int array|
 
 Response Example:
 
@@ -120,7 +120,7 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |count|电影数量|int|
-|data|电影 id 数组|int array|
+|data|movieID 集合|int array|
 
 Response Example:
 
@@ -151,7 +151,7 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |count|海报数量|int|
-|data|（电影 id，海报链接）二元组集合|array|
+|data|（movieID，海报链接）二元组集合|array|
 
 Response Example:
 
@@ -184,7 +184,7 @@ Response Example:
 Request URI:
 
 ```
-GET /resource/cinema/:id
+GET /resource/cinema/:cinemaID
 ```
 
 Response Properties:
@@ -214,7 +214,7 @@ Response Example:
 Request URI:
 
 ```
-GET /resource/cinema_hall/:id/seats
+GET /resource/cinema_hall/:cinemaHallID/seats
 ```
 
 Response Properties:
@@ -242,7 +242,7 @@ Response Example:
 Request URI:
 
 ```
-GET /resource/movie_on_show/:id
+GET /resource/movie_on_show/:movieOnShowID
 ```
 
 Response Properties:
@@ -293,7 +293,7 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |count|电影排期数量|int|
-|data|电影排期记录 ID 数组|array|
+|data|movieOnShowID 数组|array|
 
 Response Example:
 
@@ -356,8 +356,8 @@ Response Properties:
 
 | Property | Description | Type |
 |----------|-------------|------|
-|count|日期数|int|
-|data|（日期，影院 id 集合）二元组集合|array|
+|count|电影排期数|int|
+|data|（日期，cinemaID 集合）二元组集合|array|
 
 Response Example:
 
