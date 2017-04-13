@@ -14,9 +14,9 @@
     - [获取影厅座位布局（Testing）](#获取影厅座位布局（testing）)
 - [电影排期类](#电影排期类)
     - [获取电影排期（Testing）](#获取电影排期（testing）)
+    - [获取近期电影排期（Testing）](#获取近期电影排期（testing）)
     - [获取影院日排期（Testing）](#获取影院日排期（testing）)
     - [获取影院日排期摘要（Testing）](#获取影院日排期摘要（testing）)
-    - [获取近期电影排期（Testing）](#获取近期电影排期（testing）)
 - [座位类](#座位类)
     - [获取不可用座位信息（Testing）](#获取不可用座位信息（testing）)
 
@@ -271,6 +271,46 @@ Response Example:
 }
 ```
 
+<a name="获取近期电影排期（testing）"></a>
+### 获取近期电影排期（Testing）
+
+Request URI:
+
+```
+GET /resource/movie_on_show/recent
+```
+
+Request Parameters:
+
+| Param | Description |
+|-------|-------------|
+|movieID|电影 ID|
+
+Response Properties:
+
+| Property | Description | Type |
+|----------|-------------|------|
+|count|电影排期数|int|
+|data|（日期，cinemaID 集合）二元组集合|array|
+
+Response Example:
+
+```json
+{
+    "count": 2,
+    "data": [
+        {
+            "date": "2017-04-04",
+            "cinemaID": [111, 222, 333]
+        },
+        {
+            "date": "2017-04-05",
+            "cinemaID": [444, 555, 666]
+        }
+    ]
+}
+```
+
 <a name="获取影院日排期（testing）"></a>
 ### 获取影院日排期（Testing）
 
@@ -334,46 +374,6 @@ Response Example:
 {
     "min_price": 38.0,
     "time": ["14:55:00", "18:20:00", "21:25:00"]
-}
-```
-
-<a name="获取近期电影排期（testing）"></a>
-### 获取近期电影排期（Testing）
-
-Request URI:
-
-```
-GET /resource/movie_on_show/recent
-```
-
-Request Parameters:
-
-| Param | Description |
-|-------|-------------|
-|movieID|电影 ID|
-
-Response Properties:
-
-| Property | Description | Type |
-|----------|-------------|------|
-|count|电影排期数|int|
-|data|（日期，cinemaID 集合）二元组集合|array|
-
-Response Example:
-
-```json
-{
-    "count": 2,
-    "data": [
-        {
-            "date": "2017-04-04",
-            "cinemaID": [111, 222, 333]
-        },
-        {
-            "date": "2017-04-05",
-            "cinemaID": [444, 555, 666]
-        }
-    ]
 }
 ```
 
