@@ -56,6 +56,8 @@
 
 ## Iteration #2
 
+- [UI 资源](https://pan.baidu.com/s/1dFePibJ) 密码: vwyk
+
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
 [db]:               https://raw.githubusercontent.com/AwesomeTickets/Dashboard/master/img/db.png
