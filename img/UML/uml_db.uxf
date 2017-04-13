@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1110</x>
-      <y>100</y>
+      <x>1200</x>
+      <y>120</y>
       <w>420</w>
       <h>380</h>
     </coordinates>
@@ -38,8 +38,8 @@ posterLarge: 电影海报（大尺寸）URL</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1680</x>
-      <y>100</y>
+      <x>1770</x>
+      <y>120</y>
       <w>390</w>
       <h>140</h>
     </coordinates>
@@ -57,8 +57,8 @@ name: 国家名</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1520</x>
-      <y>130</y>
+      <x>1610</x>
+      <y>150</y>
       <w>180</w>
       <h>40</h>
     </coordinates>
@@ -69,8 +69,8 @@ countryID</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1680</x>
-      <y>280</y>
+      <x>1770</x>
+      <y>300</y>
       <w>390</w>
       <h>140</h>
     </coordinates>
@@ -88,8 +88,8 @@ status: 电影状态（正在上映'on'，即将上映'soon'）</panel_attribute
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1680</x>
-      <y>540</y>
+      <x>1770</x>
+      <y>560</y>
       <w>390</w>
       <h>140</h>
     </coordinates>
@@ -107,8 +107,8 @@ style: 电影风格（科幻、恐怖等）</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1110</x>
-      <y>710</y>
+      <x>1200</x>
+      <y>730</y>
       <w>350</w>
       <h>140</h>
     </coordinates>
@@ -127,8 +127,8 @@ type: 电影类型（'2D','3D','3D IMAX'）
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1290</x>
-      <y>540</y>
+      <x>1380</x>
+      <y>560</y>
       <w>250</w>
       <h>120</h>
     </coordinates>
@@ -146,8 +146,8 @@ PK (movieId,movieStyleID)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1520</x>
-      <y>290</y>
+      <x>1610</x>
+      <y>310</y>
       <w>180</w>
       <h>40</h>
     </coordinates>
@@ -158,8 +158,8 @@ movieStatusID</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1310</x>
-      <y>470</y>
+      <x>1400</x>
+      <y>490</y>
       <w>80</w>
       <h>90</h>
     </coordinates>
@@ -170,8 +170,8 @@ movieID</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1130</x>
-      <y>470</y>
+      <x>1220</x>
+      <y>490</y>
       <w>120</w>
       <h>260</h>
     </coordinates>
@@ -182,8 +182,8 @@ movieTypeID</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1530</x>
-      <y>580</y>
+      <x>1620</x>
+      <y>600</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
@@ -194,9 +194,9 @@ movieStyleID</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>670</x>
-      <y>100</y>
-      <w>350</w>
+      <x>700</x>
+      <y>120</y>
+      <w>410</w>
       <h>320</h>
     </coordinates>
     <panel_attributes>movie_on_show
@@ -206,18 +206,18 @@ PK movieOnShowID: INT NOT NULL
 FK       movieID: INT NOT NULL
 FK  cinemaHallID: INT NOT NULL
             lang: VARCHAR(16) NOT NULL
-            date: DATE NOT NULL
-            time: TIME NOT NULL
+        showDate: DATE NOT NULL
+        showTime: TIME NOT NULL
            price: DECIMAL(5, 2) NOT NULL
 
-UNIQUE(movieID, cinemaHallID, date, time)
 CHECK(price &gt; 0)
+UNIQUE(movieID, cinemaHallID, showDate, showTime)
 
 --
 
 lang: 影片语言
-date: 上映日期
-time: 上映时刻
+showDate: 上映日期
+showTime: 上映时刻
 price: 电影票单价
 
 bg=orange</panel_attributes>
@@ -226,9 +226,9 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>150</x>
-      <y>500</y>
-      <w>390</w>
+      <x>160</x>
+      <y>520</y>
+      <w>410</w>
       <h>170</h>
     </coordinates>
     <panel_attributes>cinema
@@ -249,9 +249,9 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>670</x>
-      <y>500</y>
-      <w>350</w>
+      <x>700</x>
+      <y>520</y>
+      <w>410</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>cinema_hall
@@ -273,8 +273,8 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>530</x>
-      <y>540</y>
+      <x>560</x>
+      <y>560</y>
       <w>160</w>
       <h>40</h>
     </coordinates>
@@ -285,8 +285,8 @@ cinemaID</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>850</x>
-      <y>410</y>
+      <x>900</x>
+      <y>430</y>
       <w>120</w>
       <h>110</h>
     </coordinates>
@@ -297,8 +297,8 @@ cinemaHallID</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1010</x>
-      <y>170</y>
+      <x>1100</x>
+      <y>190</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -309,9 +309,9 @@ movieID</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>150</x>
-      <y>100</y>
-      <w>390</w>
+      <x>160</x>
+      <y>120</y>
+      <w>410</w>
       <h>270</h>
     </coordinates>
     <panel_attributes>seat
@@ -321,10 +321,10 @@ PK        seatID: INT NOT NULL
 FK movieOnShowID: INT NOT NULL
              row: INT NOT NULL
              col: INT NOT NULL
-       available: BOOL NOT NULL DEFAULT 'true'
+       available: BOOLEAN NOT NULL DEFAULT TRUE
 
-UNIQUE(movieOnShowID, row, col)
 CHECK(row &gt; 0 AND col &gt; 0)
+UNIQUE(movieOnShowID, row, col)
 
 --
 
@@ -338,8 +338,8 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>530</x>
-      <y>170</y>
+      <x>560</x>
+      <y>190</y>
       <w>160</w>
       <h>40</h>
     </coordinates>

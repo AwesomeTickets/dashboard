@@ -11,12 +11,14 @@
 - [影院类](#影院类)
     - [获取影院信息（Testing）](#获取影院信息（testing）)
 - [影厅类](#影厅类)
+    - [获取影厅信息（不含座位布局）（Testing）](#获取影厅信息（不含座位布局）（testing）)
     - [获取影厅座位布局（Testing）](#获取影厅座位布局（testing）)
 - [电影排期类](#电影排期类)
-    - [获取电影排期（Testing）](#获取电影排期（testing）)
-    - [获取近期电影排期（Testing）](#获取近期电影排期（testing）)
-    - [获取影院日排期（Testing）](#获取影院日排期（testing）)
-    - [获取影院日排期摘要（Testing）](#获取影院日排期摘要（testing）)
+    - [获取电影排期（根据电影信息）（Testing）](#获取电影排期（根据电影信息）（testing）)
+    - [获取电影排期（根据 id）（Testing）](#获取电影排期（根据-id）（testing）)
+    - [获取电影的近期排期（Testing）](#获取电影的近期排期（testing）)
+    - [获取电影的影院日排期（Testing）](#获取电影的影院日排期（testing）)
+    - [获取电影的影院日排期摘要（Testing）](#获取电影的影院日排期摘要（testing）)
 - [座位类](#座位类)
     - [获取不可用座位信息（Testing）](#获取不可用座位信息（testing）)
 
@@ -208,25 +210,54 @@ Response Example:
 <a name="影厅类"></a>
 ## 影厅类
 
-<a name="获取影厅座位布局（testing）"></a>
-### 获取影厅座位布局（Testing）
+<a name="获取影厅信息（不含座位布局）（testing）"></a>
+### 获取影厅信息（不含座位布局）（Testing）
 
 Request URI:
 
 ```
-GET /resource/cinema_hall/:cinemaHallID/seats
+GET /resource/cinema_hall/:cinemaHallID
 ```
 
 Response Properties:
 
 | Property | Description | Type |
 |----------|-------------|------|
+|cinemaHallID|影厅 ID|int|
+|cinemaID|影厅所属影院 ID|int|
+|name|影厅名|string|
+
+Response Example:
+
+```json
+{
+    "cinemaHallID": 12,
+    "cinemaID": 3,
+    "name": "2号厅"
+}
+```
+
+<a name="获取影厅座位布局（testing）"></a>
+### 获取影厅座位布局（Testing）
+
+Request URI:
+
+```
+GET /resource/cinema_hall/:cinemaHallID/seat_layout
+```
+
+Response Properties:
+
+| Property | Description | Type |
+|----------|-------------|------|
+|cinemaHallID|影厅 ID|int|
 |seatLayout|影厅座位排布|string|
 
 Response Example:
 
 ```json
 {
+    "cinemaHallID": 11,
     "seatLayout": "01110,01110,11111,11111,11111"
 }
 ```
@@ -236,8 +267,52 @@ Response Example:
 <a name="电影排期类"></a>
 ## 电影排期类
 
-<a name="获取电影排期（testing）"></a>
-### 获取电影排期（Testing）
+<a name="获取电影排期（根据电影信息）（testing）"></a>
+### 获取电影排期（根据电影信息）（Testing）
+
+Request URI:
+
+```
+GET /resource/movie_on_show
+```
+
+Request Parameters:
+
+| Param | Description |
+|-------|-------------|
+|movieID|电影 ID|
+|cinemaHallID|影厅 ID|
+|showDate|放映日期|
+|showTime|放映时间|
+
+Response Properties:
+
+| Property | Description | Type |
+|----------|-------------|------|
+|movieOnShowID|电影排期 ID|int|
+|movieID|电影 ID|int|
+|cinemaHallID|影厅 ID|int|
+|lang|影片语言|string|
+|showDate|放映日期|string|
+|showTime|放映时间|string|
+|price|电影票单价|float|
+
+Response Example:
+
+```json
+{
+    "movieOnShowID": 222,
+    "movieID": 444,
+    "cinemaHallID": 333,
+    "lang": "国语",
+    "showDate": "2017-04-04",
+    "showTime": "12:35:00",
+    "price": 35.0
+}
+```
+
+<a name="获取电影排期（根据-id）（testing）"></a>
+### 获取电影排期（根据 id）（Testing）
 
 Request URI:
 
@@ -249,12 +324,12 @@ Response Properties:
 
 | Property | Description | Type |
 |----------|-------------|------|
-|movieOnShowID|电影排期记录 ID|int|
+|movieOnShowID|电影排期 ID|int|
+|movieID|电影 ID|int|
 |cinemaHallID|影厅 ID|int|
-|cinemaHallName|影厅名|string|
 |lang|影片语言|string|
-|date|放映日期|string|
-|time|放映时间|string|
+|showDate|放映日期|string|
+|showTime|放映时间|string|
 |price|电影票单价|float|
 
 Response Example:
@@ -262,17 +337,17 @@ Response Example:
 ```json
 {
     "movieOnShowID": 222,
+    "movieID": 444,
     "cinemaHallID": 333,
-    "cinemaHallName": "2号厅",
     "lang": "国语",
-    "date": "2017-04-04",
-    "time": "12:35:00",
+    "showDate": "2017-04-04",
+    "showTime": "12:35:00",
     "price": 35.0
 }
 ```
 
-<a name="获取近期电影排期（testing）"></a>
-### 获取近期电影排期（Testing）
+<a name="获取电影的近期排期（testing）"></a>
+### 获取电影的近期排期（Testing）
 
 Request URI:
 
@@ -291,7 +366,7 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |count|电影排期数|int|
-|data|（日期，cinemaID 集合）二元组集合|array|
+|data|（日期，播放该电影的影院 ID 集合）二元组集合|array|
 
 Response Example:
 
@@ -311,8 +386,8 @@ Response Example:
 }
 ```
 
-<a name="获取影院日排期（testing）"></a>
-### 获取影院日排期（Testing）
+<a name="获取电影的影院日排期（testing）"></a>
+### 获取电影的影院日排期（Testing）
 
 Request URI:
 
@@ -333,7 +408,7 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |count|电影排期数量|int|
-|data|movieOnShowID 数组|array|
+|data|电影排期 ID 集合|array|
 
 Response Example:
 
@@ -344,8 +419,8 @@ Response Example:
 }
 ```
 
-<a name="获取影院日排期摘要（testing）"></a>
-### 获取影院日排期摘要（Testing）
+<a name="获取电影的影院日排期摘要（testing）"></a>
+### 获取电影的影院日排期摘要（Testing）
 
 Request URI:
 
@@ -393,14 +468,14 @@ Request Parameters:
 
 | Param | Description |
 |-------|-------------|
-|movieOnShowID|电影排期记录 ID|
+|movieOnShowID|电影排期 ID|
 
 Response Properties:
 
 | Property | Description | Type |
 |----------|-------------|------|
 |count|不可用座位数|int|
-|data|（座位行号，座位列号）数组|array|
+|data|（不可用座位行号，不可用座位列号）数组|array|
 
 Response Example:
 
