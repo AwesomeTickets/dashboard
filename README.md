@@ -58,6 +58,14 @@
 
 - [UI 资源](https://pan.baidu.com/s/1dFePibJ) 密码: vwyk
 
+### Week #5 (04/14/2017)
+
+- 需求分析：无
+- 概要设计 & 详细设计：完善设计
+- 编码 & 测试：
+    - 前端：影院、排期、座位界面开发
+    - 后端：数据库以及 Web 接口开发
+
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
 [db]:               https://raw.githubusercontent.com/AwesomeTickets/Dashboard/master/img/db.png
