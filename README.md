@@ -66,6 +66,14 @@
     - 前端：影院、排期、座位界面开发
     - 后端：数据库以及 Web 接口开发
 
+### Week #5 (04/17/2017)
+
+- 需求分析：无
+- 概要设计 & 详细设计：无
+- 编码 & 测试：
+    - 前端：影院、排期、座位界面开发
+    - 后端：数据库以及 Web 接口开发
+
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
 [db]:               https://raw.githubusercontent.com/AwesomeTickets/Dashboard/master/img/db.png
