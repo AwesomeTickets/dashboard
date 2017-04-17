@@ -447,7 +447,7 @@ Response Example:
 
 ```json
 {
-    "min_price": 38.0,
+    "minPrice": 38.0,
     "time": ["14:55:00", "18:20:00", "21:25:00"]
 }
 ```
