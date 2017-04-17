@@ -9,18 +9,18 @@
     - [获取即将上映电影列表](#获取即将上映电影列表)
     - [获取电影大尺寸海报](#获取电影大尺寸海报)
 - [影院类](#影院类)
-    - [获取影院信息（Testing）](#获取影院信息（testing）)
+    - [获取影院信息](#获取影院信息)
 - [影厅类](#影厅类)
-    - [获取影厅信息（不含座位布局）（Testing）](#获取影厅信息（不含座位布局）（testing）)
-    - [获取影厅座位布局（Testing）](#获取影厅座位布局（testing）)
+    - [获取影厅信息（不含座位布局）](#获取影厅信息（不含座位布局）)
+    - [获取影厅座位布局](#获取影厅座位布局)
 - [电影排期类](#电影排期类)
-    - [获取电影排期（根据电影信息）（Testing）](#获取电影排期（根据电影信息）（testing）)
-    - [获取电影排期（根据 id）（Testing）](#获取电影排期（根据-id）（testing）)
-    - [获取电影的近期排期（Testing）](#获取电影的近期排期（testing）)
-    - [获取电影的影院日排期（Testing）](#获取电影的影院日排期（testing）)
-    - [获取电影的影院日排期摘要（Testing）](#获取电影的影院日排期摘要（testing）)
+    - [获取电影排期（根据电影信息）](#获取电影排期（根据电影信息）)
+    - [获取电影排期（根据 id）](#获取电影排期（根据-id）)
+    - [获取电影的近期排期](#获取电影的近期排期)
+    - [获取电影的影院日排期](#获取电影的影院日排期)
+    - [获取电影的影院日排期摘要](#获取电影的影院日排期摘要)
 - [座位类](#座位类)
-    - [获取不可用座位信息（Testing）](#获取不可用座位信息（testing）)
+    - [获取不可用座位信息](#获取不可用座位信息)
 
 <!-- /MarkdownTOC -->
 
@@ -53,7 +53,7 @@ Response Properties:
 
 | Property | Description | Type |
 |----------|-------------|------|
-|id|电影id|int|
+|movieID|电影id|int|
 |title|标题|string|
 |pubdate|上映日期（年/月/日）|string|
 |length|时长（分钟）|int|
@@ -69,7 +69,7 @@ Response Example:
 
 ```json
 {
-    "id": 1,
+    "movieID": 1,
     "title": "美女与野兽",
     "pubdate": "2017-03-17",
     "length": 130,
@@ -180,8 +180,8 @@ Response Example:
 <a name="影院类"></a>
 ## 影院类
 
-<a name="获取影院信息（testing）"></a>
-### 获取影院信息（Testing）
+<a name="获取影院信息"></a>
+### 获取影院信息
 
 Request URI:
 
@@ -210,8 +210,8 @@ Response Example:
 <a name="影厅类"></a>
 ## 影厅类
 
-<a name="获取影厅信息（不含座位布局）（testing）"></a>
-### 获取影厅信息（不含座位布局）（Testing）
+<a name="获取影厅信息（不含座位布局）"></a>
+### 获取影厅信息（不含座位布局）
 
 Request URI:
 
@@ -237,8 +237,8 @@ Response Example:
 }
 ```
 
-<a name="获取影厅座位布局（testing）"></a>
-### 获取影厅座位布局（Testing）
+<a name="获取影厅座位布局"></a>
+### 获取影厅座位布局
 
 Request URI:
 
@@ -267,8 +267,8 @@ Response Example:
 <a name="电影排期类"></a>
 ## 电影排期类
 
-<a name="获取电影排期（根据电影信息）（testing）"></a>
-### 获取电影排期（根据电影信息）（Testing）
+<a name="获取电影排期（根据电影信息）"></a>
+### 获取电影排期（根据电影信息）
 
 Request URI:
 
@@ -311,8 +311,8 @@ Response Example:
 }
 ```
 
-<a name="获取电影排期（根据-id）（testing）"></a>
-### 获取电影排期（根据 id）（Testing）
+<a name="获取电影排期（根据-id）"></a>
+### 获取电影排期（根据 id）
 
 Request URI:
 
@@ -346,8 +346,8 @@ Response Example:
 }
 ```
 
-<a name="获取电影的近期排期（testing）"></a>
-### 获取电影的近期排期（Testing）
+<a name="获取电影的近期排期"></a>
+### 获取电影的近期排期
 
 Request URI:
 
@@ -386,8 +386,8 @@ Response Example:
 }
 ```
 
-<a name="获取电影的影院日排期（testing）"></a>
-### 获取电影的影院日排期（Testing）
+<a name="获取电影的影院日排期"></a>
+### 获取电影的影院日排期
 
 Request URI:
 
@@ -419,8 +419,8 @@ Response Example:
 }
 ```
 
-<a name="获取电影的影院日排期摘要（testing）"></a>
-### 获取电影的影院日排期摘要（Testing）
+<a name="获取电影的影院日排期摘要"></a>
+### 获取电影的影院日排期摘要
 
 Request URI:
 
@@ -440,23 +440,23 @@ Response Properties:
 
 | Property | Description | Type |
 |----------|-------------|------|
-|min_price|最低电影票单价|float|
-|time|放映时间集合|array|
+|minPrice|最低电影票单价|float|
+|showTime|放映时间集合|array|
 
 Response Example:
 
 ```json
 {
     "minPrice": 38.0,
-    "time": ["14:55:00", "18:20:00", "21:25:00"]
+    "showTime": ["14:55:00", "18:20:00", "21:25:00"]
 }
 ```
 
 <a name="座位类"></a>
 ## 座位类
 
-<a name="获取不可用座位信息（testing）"></a>
-### 获取不可用座位信息（Testing）
+<a name="获取不可用座位信息"></a>
+### 获取不可用座位信息
 
 Request URI:
 
