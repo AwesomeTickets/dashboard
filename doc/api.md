@@ -153,7 +153,7 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |count|海报数量|int|
-|data|（movieID，海报链接）二元组集合|array|
+|data|（movieID，大尺寸海报 URL）二元组集合|array|
 
 Response Example:
 
@@ -162,16 +162,16 @@ Response Example:
     "count": 3,
     "data": [
         {
-            "id": 1,
-            "uri": "http://123.123.123.123/XXX.png"
+            "movieID": 1,
+            "posterLarge": "http://123.123.123.123/XXX.png"
         },
         {
-            "id": 2,
-            "uri": "http://123.123.123.123/YYY.png"
+            "movieID": 2,
+            "posterLarge": "http://123.123.123.123/YYY.png"
         },
         {
-            "id": 3,
-            "uri": "http://123.123.123.123/ZZZ.png"
+            "movieID": 3,
+            "posterLarge": "http://123.123.123.123/ZZZ.png"
         }
     ]
 }
