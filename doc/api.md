@@ -375,11 +375,11 @@ Response Example:
     "count": 2,
     "data": [
         {
-            "date": "2017-04-04",
+            "showDate": "2017-04-04",
             "cinemaID": [111, 222, 333]
         },
         {
-            "date": "2017-04-05",
+            "showDate": "2017-04-05",
             "cinemaID": [444, 555, 666]
         }
     ]
@@ -399,7 +399,7 @@ Request Parameters:
 
 | Param | Description |
 |-------|-------------|
-|date|日期（"XXXX-XX-XX"）|
+|showDate|日期（"XXXX-XX-XX"）|
 |cinemaID|影院 ID|
 |movieID|电影 ID|
 
@@ -432,7 +432,7 @@ Request Parameters:
 
 | Param | Description |
 |-------|-------------|
-|date|日期（"XXXX-XX-XX"）|
+|showDate|日期（"XXXX-XX-XX"）|
 |cinemaID|影院 ID|
 |movieID|电影 ID|
 
