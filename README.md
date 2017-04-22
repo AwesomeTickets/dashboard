@@ -13,8 +13,8 @@
 ## Docs
 
 - [需求文档][backlog]
-- [数据库设计][db]
-- [Web API][api] 
+- [Database][db]
+- [API][api] 
 - [UI 规范][ui_specification] 
 - [UI 更新日志][ui_updates_log]
 
