@@ -74,6 +74,14 @@
     - 前端：影院、排期、座位界面开发
     - 后端：数据库查询优化
 
+### Week #7 (04/24/2017)
+
+- 需求分析：确定下一轮迭代的需求
+- 概要设计 & 详细设计：确定下一轮迭代的 Web 接口以及数据库设计
+- 编码 & 测试：
+    - 前端：结束原型开发
+    - 后端：扩充模拟数据量、结束开发
+
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
 [db]:               https://raw.githubusercontent.com/AwesomeTickets/Dashboard/master/img/db.png
