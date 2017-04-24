@@ -56,7 +56,7 @@
 
 ## Iteration #2
 
-- [UI 资源(v2.1)](https://pan.baidu.com/s/1bA3Lts) 密码: swwj 
+- [UI 资源(v2.1)](https://pan.baidu.com/s/1pLkBdof) 密码: y8kn
 
 ### Week #5 (04/14/2017)
 
