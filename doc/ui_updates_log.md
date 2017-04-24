@@ -25,3 +25,18 @@
 ### 2017.4.11
 第二次迭代 选座需求完成
 ***
+
+### 2017.4.24
+- 更改场次交互逻辑更新：
+    1. 点击更换场次，显示悬浮框。
+    2. 选中时间后，当前场次及座位显示，相应更新。
+    3. 选择座位或点击确定键，收起悬浮框。
+    4. 更改场次，不保留选座。
+
+- 座位 图标更新：
+    - seats/available、seats/available_hover
+    - seats/unavailable、seats/unavailable_click
+    - seats/select
+
+- 悬浮框 UI 更新
+***
