@@ -4,50 +4,50 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1120</x>
-      <y>110</y>
-      <w>420</w>
+      <x>1100</x>
+      <y>490</y>
+      <w>430</w>
       <h>380</h>
     </coordinates>
     <panel_attributes>movie
 --
 
-PK       movieID: INT NOT NULL
-FK     countryID: INT NOT NULL
-FK movieStatusID: INT NOT NULL
-FK   movieTypeID: INT NOT NULL
-         pubdate: DATE NOT NULL
-           title: VARCHAR(64) NOT NULL
-          rating: FLOAT(2,1) NOT NULL DEFAULT 0.0
-          length: INT NOT NULL
-     posterSmall: VARCHAR(128)
-     posterLarge: VARCHAR(128)
+PK         movie_id: INT NOT NULL
+FK       country_id: INT NOT NULL
+FK  movie_status_id: INT NOT NULL
+FK    movie_type_id: INT NOT NULL
+           pub_date: DATE NOT NULL
+              title: VARCHAR(10) NOT NULL
+             rating: FLOAT(2,1) NOT NULL DEFAULT 0.0
+             length: INT NOT NULL
+       poster_small: VARCHAR(128)
+       poster_large: VARCHAR(128)
 
 CHECK(rating &gt; 0 AND length &gt; 0)
 
 --
 
-pubdate: 电影上映日期
+pub_date: 电影上映日期
 title: 电影标题
 rating: 电影评分
 length: 电影时长（分钟）
-posterSmall: 电影海报（小尺寸）URL
-posterLarge: 电影海报（大尺寸）URL</panel_attributes>
+poster_small: 电影海报（小尺寸）URL
+poster_large: 电影海报（大尺寸）URL</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1690</x>
-      <y>110</y>
-      <w>390</w>
+      <x>1140</x>
+      <y>250</y>
+      <w>350</w>
       <h>140</h>
     </coordinates>
     <panel_attributes>country
 --
 
-PK countryID: INT NOT NULL
-        name: VARCHAR(32) NOT NULL UNIQUE
+PK country_id: INT NOT NULL
+         name: VARCHAR(6) NOT NULL UNIQUE
      
 --
 
@@ -57,28 +57,28 @@ name: 国家名</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1530</x>
-      <y>140</y>
-      <w>180</w>
-      <h>40</h>
+      <x>1300</x>
+      <y>380</y>
+      <w>110</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=-
-countryID</panel_attributes>
-    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+country_id</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1690</x>
-      <y>290</y>
-      <w>390</w>
+      <x>1700</x>
+      <y>500</y>
+      <w>400</w>
       <h>140</h>
     </coordinates>
     <panel_attributes>movie_status
 --
 
-PK movieStatusID: INT NOT NULL
-          status: VARCHAR(16) NOT NULL UNIQUE
+PK movie_status_id: INT NOT NULL
+            status: VARCHAR(4) NOT NULL UNIQUE
      
 --
 
@@ -88,16 +88,16 @@ status: 电影状态（正在上映'on'，即将上映'soon'）</panel_attribute
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1690</x>
-      <y>550</y>
+      <x>1630</x>
+      <y>980</y>
       <w>390</w>
       <h>140</h>
     </coordinates>
     <panel_attributes>movie_style
 --
 
-PK movieStyleID: INT NOT NULL
-          style: VARCHAR(16) NOT NULL UNIQUE
+PK movie_style_id: INT NOT NULL
+            style: VARCHAR(2) NOT NULL UNIQUE
      
 --
 
@@ -107,16 +107,16 @@ style: 电影风格（科幻、恐怖等）</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1120</x>
-      <y>720</y>
-      <w>350</w>
+      <x>1700</x>
+      <y>710</y>
+      <w>370</w>
       <h>140</h>
     </coordinates>
     <panel_attributes>movie_type
 --
 
-PK movieTypeID: INT NOT NULL
-          type: VARCHAR(8) NOT NULL UNIQUE
+PK movie_type_id: INT NOT NULL
+            type: VARCHAR(8) NOT NULL UNIQUE
 
 --
 
@@ -127,18 +127,18 @@ type: 电影类型（'2D','3D','3D IMAX'）
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1300</x>
-      <y>550</y>
-      <w>250</w>
+      <x>1170</x>
+      <y>990</y>
+      <w>280</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>movie_has_style
 --
 
-FK      movieID: INT NOT NULL
-FK movieStyleID: INT NOT NULL
+FK       movie_id: INT NOT NULL
+FK movie_style_id: INT NOT NULL
 
-PK (movieId,movieStyleID)
+PK (movie_id, movie_style_id)
 
 </panel_attributes>
     <additional_attributes/>
@@ -146,185 +146,180 @@ PK (movieId,movieStyleID)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1530</x>
-      <y>300</y>
-      <w>180</w>
+      <x>1520</x>
+      <y>550</y>
+      <w>200</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
-movieStatusID</panel_attributes>
-    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+movie_status_id</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1320</x>
-      <y>480</y>
-      <w>80</w>
-      <h>90</h>
+      <x>1300</x>
+      <y>860</y>
+      <w>90</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=-
-movieID</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+movie_id</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1140</x>
-      <y>480</y>
-      <w>120</w>
-      <h>260</h>
-    </coordinates>
-    <panel_attributes>lt=-
-movieTypeID</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1540</x>
-      <y>590</y>
-      <w>170</w>
+      <x>1520</x>
+      <y>740</y>
+      <w>200</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
-movieStyleID</panel_attributes>
-    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+movie_type_id</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1440</x>
+      <y>1030</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+movie_style_id</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>110</y>
-      <w>410</w>
+      <x>520</x>
+      <y>490</y>
+      <w>450</w>
       <h>320</h>
     </coordinates>
     <panel_attributes>movie_on_show
 --
 
-PK movieOnShowID: INT NOT NULL
-FK       movieID: INT NOT NULL
-FK  cinemaHallID: INT NOT NULL
-            lang: VARCHAR(16) NOT NULL
-        showDate: DATE NOT NULL
-        showTime: TIME NOT NULL
-           price: DECIMAL(5, 2) NOT NULL
+PK  movie_on_show_id: INT NOT NULL
+FK          movie_id: INT NOT NULL
+FK    cinema_hall_id: INT NOT NULL
+           show_date: DATE NOT NULL
+           show_time: TIME NOT NULL
+                lang: VARCHAR(2) NOT NULL
+               price: DECIMAL(5, 2) NOT NULL
 
 CHECK(price &gt; 0)
-UNIQUE(movieID, cinemaHallID, showDate, showTime)
+UNIQUE(movie_id, cinema_hall_id, show_date, show_time)
 
 --
 
+show_date: 上映日期
+show_time: 上映时刻
 lang: 影片语言
-showDate: 上映日期
-showTime: 上映时刻
-price: 电影票单价
-
-bg=orange</panel_attributes>
+price: 电影票单价</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
-      <y>510</y>
-      <w>410</w>
+      <x>110</x>
+      <y>920</y>
+      <w>360</w>
       <h>170</h>
     </coordinates>
     <panel_attributes>cinema
 --
 
-PK cinemaID: INT NOT NULL
-       name: VARCHAR(30) NOT NULL UNIQUE
-   location: VARCHAR(50) NOT NULL UNIQUE
+PK  cinema_id: INT NOT NULL
+         name: VARCHAR(30) NOT NULL UNIQUE
+     location: VARCHAR(50) NOT NULL UNIQUE
       
 --
 
 name: 影院名
-location: 影院地理位置
-
-bg=orange</panel_attributes>
+location: 影院地理位置</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>620</x>
-      <y>510</y>
-      <w>410</w>
+      <y>910</y>
+      <w>350</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>cinema_hall
 --
 
-PK cinemaHallID: INT NOT NULL
-FK     cinemaID: INT NOT NULL
-           name: VARCHAR(16) NOT NULL
-     seatLayout: VARCHAR(256) NOT NULL
+PK  cinema_hall_id: INT NOT NULL
+FK       cinema_id: INT NOT NULL
+              name: VARCHAR(10) NOT NULL
+       seat_layout: VARCHAR(400) NOT NULL
 
 --
 
 name: 影厅名
-seatLayout: 影厅座位布局
-
-bg=orange</panel_attributes>
+seat_layout: 影厅座位布局</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>550</y>
+      <x>460</x>
+      <y>990</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+cinema_id</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>800</y>
+      <w>140</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-
+cinema_hall_id</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>960</x>
+      <y>560</y>
       <w>160</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
-cinemaID</panel_attributes>
+movie_id</panel_attributes>
     <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>820</x>
-      <y>420</y>
-      <w>120</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>lt=-
-cinemaHallID</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1020</x>
-      <y>180</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-
-movieID</panel_attributes>
-    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
-      <y>110</y>
-      <w>410</w>
-      <h>270</h>
+      <x>520</x>
+      <y>100</y>
+      <w>430</w>
+      <h>290</h>
     </coordinates>
     <panel_attributes>seat
 --
 
-PK        seatID: INT NOT NULL
-FK movieOnShowID: INT NOT NULL
-             row: INT NOT NULL
-             col: INT NOT NULL
-       available: BOOLEAN NOT NULL DEFAULT TRUE
+PK           seat_id: INT NOT NULL
+FK         ticket_id: INT DEFAULT NULL
+FK  movie_on_show_id: INT NOT NULL
+                 row: INT NOT NULL
+                 col: INT NOT NULL
+           available: BOOLEAN NOT NULL DEFAULT TRUE
 
 CHECK(row &gt; 0 AND col &gt; 0)
-UNIQUE(movieOnShowID, row, col)
+UNIQUE(movie_on_show_id, row, col)
 
 --
 
@@ -338,13 +333,84 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>180</y>
+      <x>730</x>
+      <y>380</y>
       <w>160</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-
+movie_on_show_id</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>210</y>
+      <w>180</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
-movieOnShowID</panel_attributes>
-    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+ticket_id</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>420</y>
+      <w>370</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>user
+--
+
+PK         user_id: INT NOT NULL
+         phone_num: CHAR(11) NOT NULL UNIQUE
+   remain_purchase: INT NOT NULL DEFAULT 4
+
+--
+
+phone_num: 手机号
+remain_purchase: 剩余购票次数
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>140</y>
+      <w>310</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>ticket
+--
+
+PK  ticket_id: INT NOT NULL
+FK    user_id: INT NOT NULL
+        valid: BOOLEAN DEFAULT TRUE
+       digest: CHAR(32) DEFAULT NULL
+
+--
+
+valid: 票是否可用
+digest: 票务消息摘要
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>320</y>
+      <w>80</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-
+user_id</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
 </diagram>
