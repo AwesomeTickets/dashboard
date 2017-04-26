@@ -29,7 +29,7 @@
     - [验证手机号（Testing）](#验证手机号（testing）)
 - [票务类](#票务类)
     - [购票（Testing）](#购票（testing）)
-    - [验票（Testing）](#验票（testing）)
+    - [取票（Testing）](#取票（testing）)
     - [查询票务信息（Testing）](#查询票务信息（testing）)
 
 <!-- /MarkdownTOC -->
@@ -69,6 +69,7 @@ AwesomeTickets API 通过 HTTP Status Code 来说明 API 请求是否成功。
 |451|座位不存在|
 |452|无效的取票码|
 |453|超出今日购票次数上限|
+|454|票已被取出|
 
 <a name="电影类"></a>
 ## 电影类
@@ -624,13 +625,13 @@ Response Example:
 ```json
 {
     "movieOnShowId": 115,
-    "seats": [[7, 8], [7, 9], [7, 10], [7, 11]]
+    "seats": [[7, 8], [7, 9], [7, 10], [7, 11]],
     "ticketCode": "123456789"
 }
 ```
 
-<a name="验票（testing）"></a>
-### 验票（Testing）
+<a name="取票（testing）"></a>
+### 取票（Testing）
 
 Request URI:
 
@@ -681,12 +682,14 @@ Response Properties:
 |----------|-------------|------|
 |movieOnShowId|电影排期 id|int|
 |seats|（座位行号，座位列号）数组|int|
+|valid|票是否可用（未被取出）|boolean|
 
 Response Example:
 
 ```json
 {
     "movieOnShowId": 115,
-    "seats": [[7, 8], [7, 9], [7, 10], [7, 11]]
+    "seats": [[7, 8], [7, 9], [7, 10], [7, 11]],
+    "valid": true
 }
 ```
