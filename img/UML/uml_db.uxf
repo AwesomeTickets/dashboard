@@ -211,7 +211,7 @@ FK    cinema_hall_id: INT NOT NULL
                price: DECIMAL(5, 2) NOT NULL
 
 CHECK(price &gt; 0)
-UNIQUE(movie_id, cinema_hall_id, show_date, show_time)
+UNIQUE(movie_id, show_date, cinema_hall_id, show_time)
 
 --
 
