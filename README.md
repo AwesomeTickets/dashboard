@@ -12,9 +12,9 @@
 
 ## Docs
 
-- [需求文档][backlog]
+- [Backlog][backlog]
 - [Database][db]
-- [API][api] 
+- [API][api]
 - [UI 规范][ui_specification] 
 - [UI 更新日志][ui_updates_log]
 
