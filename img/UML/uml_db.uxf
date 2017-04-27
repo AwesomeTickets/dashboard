@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1150</x>
-      <y>490</y>
+      <x>1140</x>
+      <y>410</y>
       <w>430</w>
       <h>380</h>
     </coordinates>
@@ -38,8 +38,8 @@ poster_large: 电影海报（大尺寸）URL</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1190</x>
-      <y>250</y>
+      <x>1180</x>
+      <y>150</y>
       <w>350</w>
       <h>140</h>
     </coordinates>
@@ -57,22 +57,22 @@ name: 国家名</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1350</x>
-      <y>380</y>
-      <w>110</w>
-      <h>130</h>
+      <x>1340</x>
+      <y>280</y>
+      <w>130</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=*
+m1=0..n
 m2=1
-country_id</panel_attributes>
-    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+FK country_id</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1750</x>
-      <y>500</y>
+      <x>1780</x>
+      <y>420</y>
       <w>400</w>
       <h>140</h>
     </coordinates>
@@ -90,8 +90,8 @@ status: 电影状态（正在上映'on'，即将上映'soon'）</panel_attribute
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1680</x>
-      <y>980</y>
+      <x>1690</x>
+      <y>900</y>
       <w>390</w>
       <h>140</h>
     </coordinates>
@@ -109,8 +109,8 @@ style: 电影风格（科幻、恐怖等）</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1750</x>
-      <y>710</y>
+      <x>1780</x>
+      <y>630</y>
       <w>370</w>
       <h>140</h>
     </coordinates>
@@ -129,8 +129,8 @@ type: 电影类型（'2D','3D','3D IMAX'）
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1220</x>
-      <y>990</y>
+      <x>1210</x>
+      <y>910</y>
       <w>280</w>
       <h>120</h>
     </coordinates>
@@ -148,64 +148,64 @@ PK (movie_id, movie_style_id)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1570</x>
-      <y>550</y>
-      <w>200</w>
+      <x>1560</x>
+      <y>470</y>
+      <w>240</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=*
+m1=0..n
 m2=1
-movie_status_id</panel_attributes>
-    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+FK movie_status_id</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1350</x>
-      <y>860</y>
-      <w>90</w>
+      <x>1340</x>
+      <y>780</y>
+      <w>120</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
-m2=*
-movie_id</panel_attributes>
+m2=0..n
+FK movie_id</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1570</x>
-      <y>740</y>
-      <w>200</w>
+      <x>1560</x>
+      <y>660</y>
+      <w>240</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=*
+m1=0..n
 m2=1
-movie_type_id</panel_attributes>
-    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+FK movie_type_id</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1490</x>
-      <y>1030</y>
-      <w>210</w>
+      <x>1480</x>
+      <y>950</y>
+      <w>230</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=*
+m1=0..n
 m2=1
-movie_style_id</panel_attributes>
-    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+FK movie_style_id</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>490</y>
+      <x>520</x>
+      <y>410</y>
       <w>450</w>
       <h>320</h>
     </coordinates>
@@ -234,8 +234,8 @@ price: 电影票单价</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
-      <y>930</y>
+      <x>50</x>
+      <y>850</y>
       <w>360</w>
       <h>170</h>
     </coordinates>
@@ -255,8 +255,8 @@ location: 影院地理位置</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>610</x>
-      <y>920</y>
+      <x>570</x>
+      <y>840</y>
       <w>350</w>
       <h>190</h>
     </coordinates>
@@ -277,50 +277,50 @@ seat_layout: 影厅座位布局</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>440</x>
-      <y>1000</y>
+      <x>400</x>
+      <y>920</y>
       <w>190</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
-m2=*
-cinema_id</panel_attributes>
+m2=1..n
+FK cinema_id</panel_attributes>
     <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>770</x>
-      <y>800</y>
-      <w>140</w>
+      <x>730</x>
+      <y>720</y>
+      <w>160</w>
       <h>140</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=*
+m1=0..n
 m2=1
-cinema_hall_id</panel_attributes>
+FK cinema_hall_id</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1000</x>
-      <y>560</y>
-      <w>170</w>
+      <x>960</x>
+      <y>480</y>
+      <w>200</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=*
+m1=0..n
 m2=1
-movie_id</panel_attributes>
-    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+FK movie_id</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
-      <y>80</y>
+      <x>530</x>
+      <y>0</y>
       <w>430</w>
       <h>290</h>
     </coordinates>
@@ -349,36 +349,36 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>770</x>
-      <y>360</y>
-      <w>160</w>
+      <x>730</x>
+      <y>280</y>
+      <w>180</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=*
+m1=1..n
 m2=1
-movie_on_show_id</panel_attributes>
+FK movie_on_show_id</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>190</y>
+      <x>360</x>
+      <y>110</y>
       <w>190</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=*
+m1=1..4
 m2=0..1
-ticket_id</panel_attributes>
+FK ticket_id</panel_attributes>
     <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>430</y>
+      <x>30</x>
+      <y>350</y>
       <w>370</w>
       <h>180</h>
     </coordinates>
@@ -400,8 +400,8 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>100</x>
-      <y>120</y>
+      <x>60</x>
+      <y>40</y>
       <w>310</w>
       <h>190</h>
     </coordinates>
@@ -424,15 +424,15 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>300</y>
-      <w>80</w>
+      <x>200</x>
+      <y>220</y>
+      <w>110</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=*
+m1=0..n
 m2=1
-user_id</panel_attributes>
+FK user_id</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
 </diagram>
