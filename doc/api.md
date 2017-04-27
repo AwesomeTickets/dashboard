@@ -67,9 +67,10 @@ AwesomeTickets API 通过 HTTP Status Code 来说明 API 请求是否成功。
 |------|-------------|
 |450|座位已经被购买|
 |451|座位不存在|
-|452|无效的取票码|
-|453|超出今日购票次数上限|
-|454|票已被取出|
+|452|手机号未验证|
+|453|无效的取票码|
+|454|超出今日购票次数上限|
+|455|票已被取出|
 
 <a name="电影类"></a>
 ## 电影类
@@ -603,6 +604,7 @@ Request Parameters:
 | Param | Description |
 |-------|-------------|
 |movieOnShowId|电影排期 id|
+|phoneNum|已验证的手机号|
 |row1|第一张票的座位行号|
 |col1|第一张票的座位列号|
 |row2|第二张票的座位行号（可选）|
@@ -618,6 +620,7 @@ Response Properties:
 |----------|-------------|------|
 |movieOnShowId|电影排期 id|int|
 |seats|（座位行号，座位列号）数组|int|
+|phoneNum|购票手机号|string|
 |ticketCode|取票码|string|
 
 Response Example:
@@ -626,6 +629,7 @@ Response Example:
 {
     "movieOnShowId": 115,
     "seats": [[7, 8], [7, 9], [7, 10], [7, 11]],
+    "phoneNum": "13511112222",
     "ticketCode": "123456789"
 }
 ```
@@ -644,6 +648,7 @@ Request Parameters:
 | Param | Description |
 |-------|-------------|
 |ticketCode|取票码|
+|phoneNum|购票手机号|
 
 Response Properties:
 
@@ -651,13 +656,15 @@ Response Properties:
 |----------|-------------|------|
 |movieOnShowId|电影排期 id|int|
 |seats|（座位行号，座位列号）数组|int|
+|phoneNum|购票手机号|string|
 
 Response Example:
 
 ```json
 {
     "movieOnShowId": 115,
-    "seats": [[7, 8], [7, 9], [7, 10], [7, 11]]
+    "seats": [[7, 8], [7, 9], [7, 10], [7, 11]],
+    "phoneNum": "13511112222"
 }
 ```
 
@@ -675,6 +682,7 @@ Request Parameters:
 | Param | Description |
 |-------|-------------|
 |ticketCode|取票码|
+|phoneNum|购票手机号|string|
 
 Response Properties:
 
@@ -683,6 +691,7 @@ Response Properties:
 |movieOnShowId|电影排期 id|int|
 |seats|（座位行号，座位列号）数组|int|
 |valid|票是否可用（未被取出）|boolean|
+|phoneNum|购票手机号|string|
 
 Response Example:
 
@@ -690,6 +699,7 @@ Response Example:
 {
     "movieOnShowId": 115,
     "seats": [[7, 8], [7, 9], [7, 10], [7, 11]],
-    "valid": true
+    "valid": true,
+    "phoneNum": "13511112222"
 }
 ```
