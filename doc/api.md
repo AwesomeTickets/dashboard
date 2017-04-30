@@ -229,16 +229,16 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |cinemaId|影院 id|int|
-|name|影院名|string|
-|location|影院地址|string|
+|cinemaName|影院名|string|
+|cinemaAddr|影院地址|string|
 
 Response Example:
 
 ```json
 {
     "cinemaId": 3,
-    "name": "金逸珠江国际影城（大学城店）",
-    "location": "番禺区大学城XXX铺"
+    "cinemaName": "金逸珠江国际影城（大学城店）",
+    "cinemaAddr": "番禺区大学城XXX铺"
 }
 ```
 
@@ -260,7 +260,7 @@ Response Properties:
 |----------|-------------|------|
 |cinemaHallId|影厅 id|int|
 |cinemaId|影厅所属影院 id|int|
-|name|影厅名|string|
+|hallName|影厅名|string|
 
 Response Example:
 
@@ -268,7 +268,7 @@ Response Example:
 {
     "cinemaHallId": 12,
     "cinemaId": 3,
-    "name": "2号厅"
+    "hallName": "2号厅"
 }
 ```
 
