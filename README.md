@@ -1,5 +1,7 @@
 # Dashboard
 
+Records of development progress.
+
 [课程网站][course_website] [前端源码][client_source] [后端源码][server_source]
 
 ## Team & Division
@@ -84,7 +86,7 @@
 
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
-[db]:               https://raw.githubusercontent.com/AwesomeTickets/Dashboard/master/img/db.png
+[db]:               https://github.com/AwesomeTickets/Database
 [api]:              ./doc/api.md
 [course_website]:   http://ss.sysu.edu.cn/~pml/se305/x_Team_ticket.html
 [client_source]:    https://github.com/AwesomeTickets/Tickets-Client
