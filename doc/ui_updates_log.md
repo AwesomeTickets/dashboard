@@ -40,3 +40,12 @@
 
 - 悬浮框 UI 更新
 ***
+
+### 2017.5.1
+- 更新选座页面 UI
+
+- 图标更新：
+    - scrollBarArrow_left、scrollBarArrow_right
+    - selectSeat_screen
+    
+***
