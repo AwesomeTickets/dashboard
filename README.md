@@ -84,6 +84,16 @@ Records of development progress.
     - 前端：结束原型开发
     - 后端：扩充模拟数据量、结束开发
 
+## Iteration #3
+
+### Week #8 (05/01/2017)
+
+- 需求分析：无
+- 概要设计 & 详细设计：完善设计
+- 编码 & 测试：
+    - 前端：代码优化；选座页面水平滚动条
+    - 后端：实体集开发；短信服务开发；取票码服务开发
+
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
 [db]:               https://github.com/AwesomeTickets/Database
