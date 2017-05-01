@@ -86,6 +86,8 @@ Records of development progress.
 
 ## Iteration #3
 
+- [UI 资源](https://pan.baidu.com/s/1bObnjw) 密码: 25sk
+
 ### Week #8 (05/01/2017)
 
 - 需求分析：无
