@@ -3,9 +3,7 @@
 <!-- MarkdownTOC -->
 
 - [返回状态说明](#返回状态说明)
-    - [通用类状态码](#通用类状态码)
-    - [短信类状态码](#短信类状态码)
-    - [票务类状态码](#票务类状态码)
+    - [错误码](#错误码)
 - [电影类](#电影类)
     - [获取电影信息](#获取电影信息)
     - [获取正在上映电影列表](#获取正在上映电影列表)
@@ -37,40 +35,34 @@
 <a name="返回状态说明"></a>
 ## 返回状态说明
 
-AwesomeTickets API 通过 HTTP Status Code 来说明 API 请求是否成功。
+一个请求是否成功是由 HTTP 状态码标明的。一个 2XX 的状态码表示成功，而一个 4XX 表示请求失败。当一个请求失败时响应的主体仍然是一个 JSON 对象，里面包含 `code` 和 `info` 这两个字段，分别表示 AwesomeTickets 自定义的[错误码](#错误码)以及错误信息，便于调试。
 
-<a name="通用类状态码"></a>
-### 通用类状态码
+比如，请求失败时，一个可能的响应主体如下：
 
-| Code | Description |
-|------|-------------|
-|200|请求成功|
-|400|请求的地址不存在或者包含不支持的参数|
-|403|禁止访问|
-|404|请求的资源不存在|
-|500|服务器内部错误|
+```
+{
+    "code": 0,
+    "info": "fail"
+}
+```
 
-<a name="短信类状态码"></a>
-### 短信类状态码
+<a name="错误码"></a>
+### 错误码
 
-| Code | Description |
-|------|-------------|
-|440|手机号格式错误|
-|441|手机号已验证|
-|442|验证码错误|
-|443|短信发送间隔时间过短|
+`Constant` 列表示服务端源码中错误码的常量名。
 
-<a name="票务类状态码"></a>
-### 票务类状态码
-
-| Code | Description |
-|------|-------------|
-|450|座位已经被购买|
-|451|无效的座位信息|
-|452|无效的取票码|
-|453|手机号不匹配|
-|454|超出今日购票次数上限|
-|455|票已被取出|
+| Code | HTTP Status | Description | Constant |
+|:----:|:-----------:|-------------|----------|
+|0|400|参数错误，与 400 状态码含义一致。|ErrorStatus.BAD_REQUEST|
+|1|404|资源未找到，与 404 状态码含义一致。|ErrorStatus.RESOURCE_NOT_FOUND|
+|100|400|手机号格式错误，手机号长度要求为11位。|ErrorStatus.PHONE_INVALID_FORMAT|
+|101|400|不匹配的短信验证码。|ErrorStatus.SMS_MISMATCH|
+|200|400|座位已被购买，请更换其它座位。|ErrorStatus.SEAT_UNAVAILABLE|
+|201|400|座位不存在，请检查座位行列号是否输入正确。|ErrorStatus.SEAT_NOT_FOUND|
+|300|400|取票手机号不匹配。|ErrorStatus.PHONE_MISMATCH|
+|301|400|取票码不存在。|ErrorStatus.TICKET_CODE_NOT_FOUND|
+|400|400|票已经被取出，不能再次取票。|ErrorStatus.TICKET_CHECKED|
+|500|403|手机号超出每日购票次数上限。|ErrorStatus.PURCHASE_UNAVAILABLE|
 
 <a name="电影类"></a>
 ## 电影类
@@ -524,8 +516,6 @@ Response Example:
 <a name="短信类"></a>
 ## 短信类
 
-[状态码](#短信类状态码)
-
 <a name="发送验证码短信（testing）"></a>
 ### 发送验证码短信（Testing）
 
@@ -587,8 +577,6 @@ Response Example:
 
 <a name="票务类"></a>
 ## 票务类
-
-[状态码](#票务类状态码)
 
 <a name="购票（testing）"></a>
 ### 购票（Testing）
