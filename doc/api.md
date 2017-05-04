@@ -2,40 +2,40 @@
 
 <!-- MarkdownTOC -->
 
-- [返回状态说明](#返回状态说明)
-    - [错误码](#错误码)
-- [电影类](#电影类)
-    - [获取电影信息](#获取电影信息)
-    - [获取正在上映电影列表](#获取正在上映电影列表)
-    - [获取即将上映电影列表](#获取即将上映电影列表)
-    - [获取电影大尺寸海报](#获取电影大尺寸海报)
-- [影院类](#影院类)
-    - [获取影院信息](#获取影院信息)
-- [影厅类](#影厅类)
-    - [获取影厅信息（不含座位布局）](#获取影厅信息（不含座位布局）)
-    - [获取影厅座位布局](#获取影厅座位布局)
-- [电影排期类](#电影排期类)
-    - [获取电影排期（根据电影信息）](#获取电影排期（根据电影信息）)
-    - [获取电影排期（根据 id）](#获取电影排期（根据-id）)
-    - [获取电影的近期排期](#获取电影的近期排期)
-    - [获取电影的影院日排期](#获取电影的影院日排期)
-    - [获取电影的影院日排期摘要](#获取电影的影院日排期摘要)
-- [座位类](#座位类)
-    - [获取不可用座位信息](#获取不可用座位信息)
-- [短信类](#短信类)
-    - [发送验证码短信（Testing）](#发送验证码短信（testing）)
-    - [验证手机号（Testing）](#验证手机号（testing）)
-- [票务类](#票务类)
-    - [购票（Testing）](#购票（testing）)
-    - [取票（Testing）](#取票（testing）)
-    - [查询票务信息（Testing）](#查询票务信息（testing）)
+- [返回状态说明](#%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E8%AF%B4%E6%98%8E)
+    - [错误码](#%E9%94%99%E8%AF%AF%E7%A0%81)
+- [电影类](#%E7%94%B5%E5%BD%B1%E7%B1%BB)
+    - [获取电影信息](#%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E4%BF%A1%E6%81%AF)
+    - [获取正在上映电影列表](#%E8%8E%B7%E5%8F%96%E6%AD%A3%E5%9C%A8%E4%B8%8A%E6%98%A0%E7%94%B5%E5%BD%B1%E5%88%97%E8%A1%A8)
+    - [获取即将上映电影列表](#%E8%8E%B7%E5%8F%96%E5%8D%B3%E5%B0%86%E4%B8%8A%E6%98%A0%E7%94%B5%E5%BD%B1%E5%88%97%E8%A1%A8)
+    - [获取电影大尺寸海报](#%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E5%A4%A7%E5%B0%BA%E5%AF%B8%E6%B5%B7%E6%8A%A5)
+- [影院类](#%E5%BD%B1%E9%99%A2%E7%B1%BB)
+    - [获取影院信息](#%E8%8E%B7%E5%8F%96%E5%BD%B1%E9%99%A2%E4%BF%A1%E6%81%AF)
+- [影厅类](#%E5%BD%B1%E5%8E%85%E7%B1%BB)
+    - [获取影厅信息（不含座位布局）](#%E8%8E%B7%E5%8F%96%E5%BD%B1%E5%8E%85%E4%BF%A1%E6%81%AF%EF%BC%88%E4%B8%8D%E5%90%AB%E5%BA%A7%E4%BD%8D%E5%B8%83%E5%B1%80%EF%BC%89)
+    - [获取影厅座位布局](#%E8%8E%B7%E5%8F%96%E5%BD%B1%E5%8E%85%E5%BA%A7%E4%BD%8D%E5%B8%83%E5%B1%80)
+- [电影排期类](#%E7%94%B5%E5%BD%B1%E6%8E%92%E6%9C%9F%E7%B1%BB)
+    - [获取电影排期（根据电影信息）](#%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E6%8E%92%E6%9C%9F%EF%BC%88%E6%A0%B9%E6%8D%AE%E7%94%B5%E5%BD%B1%E4%BF%A1%E6%81%AF%EF%BC%89)
+    - [获取电影排期（根据 id）](#%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E6%8E%92%E6%9C%9F%EF%BC%88%E6%A0%B9%E6%8D%AE-id%EF%BC%89)
+    - [获取电影的近期排期](#%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E7%9A%84%E8%BF%91%E6%9C%9F%E6%8E%92%E6%9C%9F)
+    - [获取电影的影院日排期](#%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E7%9A%84%E5%BD%B1%E9%99%A2%E6%97%A5%E6%8E%92%E6%9C%9F)
+    - [获取电影的影院日排期摘要](#%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E7%9A%84%E5%BD%B1%E9%99%A2%E6%97%A5%E6%8E%92%E6%9C%9F%E6%91%98%E8%A6%81)
+- [座位类](#%E5%BA%A7%E4%BD%8D%E7%B1%BB)
+    - [获取不可用座位信息](#%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%8F%AF%E7%94%A8%E5%BA%A7%E4%BD%8D%E4%BF%A1%E6%81%AF)
+- [短信类](#%E7%9F%AD%E4%BF%A1%E7%B1%BB)
+    - [发送验证码短信（Testing）](#%E5%8F%91%E9%80%81%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9F%AD%E4%BF%A1%EF%BC%88testing%EF%BC%89)
+    - [验证手机号（Testing）](#%E9%AA%8C%E8%AF%81%E6%89%8B%E6%9C%BA%E5%8F%B7%EF%BC%88testing%EF%BC%89)
+- [票务类](#%E7%A5%A8%E5%8A%A1%E7%B1%BB)
+    - [购票（Testing）](#%E8%B4%AD%E7%A5%A8%EF%BC%88testing%EF%BC%89)
+    - [取票（Testing）](#%E5%8F%96%E7%A5%A8%EF%BC%88testing%EF%BC%89)
+    - [查询票务信息（Testing）](#%E6%9F%A5%E8%AF%A2%E7%A5%A8%E5%8A%A1%E4%BF%A1%E6%81%AF%EF%BC%88testing%EF%BC%89)
 
 <!-- /MarkdownTOC -->
 
-<a name="返回状态说明"></a>
+<a name="%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E8%AF%B4%E6%98%8E"></a>
 ## 返回状态说明
 
-一个请求是否成功是由 HTTP 状态码标明的。一个 2XX 的状态码表示成功，而一个 4XX 表示请求失败。当一个请求失败时响应的主体仍然是一个 JSON 对象，里面包含 `code` 和 `info` 这两个字段，分别表示 AwesomeTickets 自定义的[错误码](#错误码)以及错误信息，便于调试。
+一个请求是否成功是由 HTTP 状态码标明的。一个 2XX 的状态码表示成功，而一个 4XX 表示请求失败。当一个请求失败时响应的主体仍然是一个 JSON 对象，里面包含 `code` 和 `info` 这两个字段，分别表示 AwesomeTickets 自定义的错误码以及错误信息，便于调试。
 
 比如，请求失败时，一个可能的响应主体如下：
 
@@ -46,7 +46,7 @@
 }
 ```
 
-<a name="错误码"></a>
+<a name="%E9%94%99%E8%AF%AF%E7%A0%81"></a>
 ### 错误码
 
 `Constant` 列表示服务端源码中错误码的常量名。
@@ -56,7 +56,8 @@
 |0|400|参数错误，与 400 状态码含义一致。|ErrorStatus.BAD_REQUEST|
 |1|404|资源未找到，与 404 状态码含义一致。|ErrorStatus.RESOURCE_NOT_FOUND|
 |100|400|手机号格式错误，手机号长度要求为11位。|ErrorStatus.PHONE_INVALID_FORMAT|
-|101|400|不匹配的短信验证码。|ErrorStatus.SMS_MISMATCH|
+|101|400|短信验证码发送失败，两次发送间隔至少要 60 秒。|ErrorStatus.SMS_SEND_FAIL|
+|102|400|不匹配的短信验证码。|ErrorStatus.SMS_MISMATCH|
 |200|400|座位已被购买，请更换其它座位。|ErrorStatus.SEAT_UNAVAILABLE|
 |201|400|座位不存在，请检查座位行列号是否输入正确。|ErrorStatus.SEAT_NOT_FOUND|
 |300|400|取票手机号不匹配。|ErrorStatus.PHONE_MISMATCH|
@@ -64,10 +65,10 @@
 |400|400|票已经被取出，不能再次取票。|ErrorStatus.TICKET_CHECKED|
 |500|403|手机号超出每日购票次数上限。|ErrorStatus.PURCHASE_UNAVAILABLE|
 
-<a name="电影类"></a>
+<a name="%E7%94%B5%E5%BD%B1%E7%B1%BB"></a>
 ## 电影类
 
-<a name="获取电影信息"></a>
+<a name="%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E4%BF%A1%E6%81%AF"></a>
 ### 获取电影信息
 
 Request URI:
@@ -110,7 +111,7 @@ Response Example:
 }
 ```
 
-<a name="获取正在上映电影列表"></a>
+<a name="%E8%8E%B7%E5%8F%96%E6%AD%A3%E5%9C%A8%E4%B8%8A%E6%98%A0%E7%94%B5%E5%BD%B1%E5%88%97%E8%A1%A8"></a>
 ### 获取正在上映电影列表
 
 Request URI:
@@ -135,7 +136,7 @@ Response Example:
 }
 ```
 
-<a name="获取即将上映电影列表"></a>
+<a name="%E8%8E%B7%E5%8F%96%E5%8D%B3%E5%B0%86%E4%B8%8A%E6%98%A0%E7%94%B5%E5%BD%B1%E5%88%97%E8%A1%A8"></a>
 ### 获取即将上映电影列表
 
 Request URI:
@@ -160,7 +161,7 @@ Response Example:
 }
 ```
 
-<a name="获取电影大尺寸海报"></a>
+<a name="%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E5%A4%A7%E5%B0%BA%E5%AF%B8%E6%B5%B7%E6%8A%A5"></a>
 ### 获取电影大尺寸海报
 
 Request URI:
@@ -204,10 +205,10 @@ Response Example:
 }
 ```
 
-<a name="影院类"></a>
+<a name="%E5%BD%B1%E9%99%A2%E7%B1%BB"></a>
 ## 影院类
 
-<a name="获取影院信息"></a>
+<a name="%E8%8E%B7%E5%8F%96%E5%BD%B1%E9%99%A2%E4%BF%A1%E6%81%AF"></a>
 ### 获取影院信息
 
 Request URI:
@@ -234,10 +235,10 @@ Response Example:
 }
 ```
 
-<a name="影厅类"></a>
+<a name="%E5%BD%B1%E5%8E%85%E7%B1%BB"></a>
 ## 影厅类
 
-<a name="获取影厅信息（不含座位布局）"></a>
+<a name="%E8%8E%B7%E5%8F%96%E5%BD%B1%E5%8E%85%E4%BF%A1%E6%81%AF%EF%BC%88%E4%B8%8D%E5%90%AB%E5%BA%A7%E4%BD%8D%E5%B8%83%E5%B1%80%EF%BC%89"></a>
 ### 获取影厅信息（不含座位布局）
 
 Request URI:
@@ -264,7 +265,7 @@ Response Example:
 }
 ```
 
-<a name="获取影厅座位布局"></a>
+<a name="%E8%8E%B7%E5%8F%96%E5%BD%B1%E5%8E%85%E5%BA%A7%E4%BD%8D%E5%B8%83%E5%B1%80"></a>
 ### 获取影厅座位布局
 
 Request URI:
@@ -291,10 +292,10 @@ Response Example:
 
 （注：座位排布字段 `seatLayout` 用逗号分隔每行的座位排布，0表示无座位，1表示有座位。示例中的字段表示了前2排有3个座位（居中放置），后3排有5个座位的布局方式）
 
-<a name="电影排期类"></a>
+<a name="%E7%94%B5%E5%BD%B1%E6%8E%92%E6%9C%9F%E7%B1%BB"></a>
 ## 电影排期类
 
-<a name="获取电影排期（根据电影信息）"></a>
+<a name="%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E6%8E%92%E6%9C%9F%EF%BC%88%E6%A0%B9%E6%8D%AE%E7%94%B5%E5%BD%B1%E4%BF%A1%E6%81%AF%EF%BC%89"></a>
 ### 获取电影排期（根据电影信息）
 
 Request URI:
@@ -338,7 +339,7 @@ Response Example:
 }
 ```
 
-<a name="获取电影排期（根据-id）"></a>
+<a name="%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E6%8E%92%E6%9C%9F%EF%BC%88%E6%A0%B9%E6%8D%AE-id%EF%BC%89"></a>
 ### 获取电影排期（根据 id）
 
 Request URI:
@@ -373,7 +374,7 @@ Response Example:
 }
 ```
 
-<a name="获取电影的近期排期"></a>
+<a name="%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E7%9A%84%E8%BF%91%E6%9C%9F%E6%8E%92%E6%9C%9F"></a>
 ### 获取电影的近期排期
 
 Request URI:
@@ -413,7 +414,7 @@ Response Example:
 }
 ```
 
-<a name="获取电影的影院日排期"></a>
+<a name="%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E7%9A%84%E5%BD%B1%E9%99%A2%E6%97%A5%E6%8E%92%E6%9C%9F"></a>
 ### 获取电影的影院日排期
 
 Request URI:
@@ -446,7 +447,7 @@ Response Example:
 }
 ```
 
-<a name="获取电影的影院日排期摘要"></a>
+<a name="%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E7%9A%84%E5%BD%B1%E9%99%A2%E6%97%A5%E6%8E%92%E6%9C%9F%E6%91%98%E8%A6%81"></a>
 ### 获取电影的影院日排期摘要
 
 Request URI:
@@ -479,10 +480,10 @@ Response Example:
 }
 ```
 
-<a name="座位类"></a>
+<a name="%E5%BA%A7%E4%BD%8D%E7%B1%BB"></a>
 ## 座位类
 
-<a name="获取不可用座位信息"></a>
+<a name="%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%8F%AF%E7%94%A8%E5%BA%A7%E4%BD%8D%E4%BF%A1%E6%81%AF"></a>
 ### 获取不可用座位信息
 
 Request URI:
@@ -513,10 +514,10 @@ Response Example:
 }
 ```
 
-<a name="短信类"></a>
+<a name="%E7%9F%AD%E4%BF%A1%E7%B1%BB"></a>
 ## 短信类
 
-<a name="发送验证码短信（testing）"></a>
+<a name="%E5%8F%91%E9%80%81%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9F%AD%E4%BF%A1%EF%BC%88testing%EF%BC%89"></a>
 ### 发送验证码短信（Testing）
 
 Request URI:
@@ -545,7 +546,7 @@ Response Example:
 }
 ```
 
-<a name="验证手机号（testing）"></a>
+<a name="%E9%AA%8C%E8%AF%81%E6%89%8B%E6%9C%BA%E5%8F%B7%EF%BC%88testing%EF%BC%89"></a>
 ### 验证手机号（Testing）
 
 Request URI:
@@ -575,10 +576,10 @@ Response Example:
 }
 ```
 
-<a name="票务类"></a>
+<a name="%E7%A5%A8%E5%8A%A1%E7%B1%BB"></a>
 ## 票务类
 
-<a name="购票（testing）"></a>
+<a name="%E8%B4%AD%E7%A5%A8%EF%BC%88testing%EF%BC%89"></a>
 ### 购票（Testing）
 
 Request URI:
@@ -615,7 +616,7 @@ Response Example:
 }
 ```
 
-<a name="取票（testing）"></a>
+<a name="%E5%8F%96%E7%A5%A8%EF%BC%88testing%EF%BC%89"></a>
 ### 取票（Testing）
 
 Request URI:
@@ -649,7 +650,7 @@ Response Example:
 }
 ```
 
-<a name="查询票务信息（testing）"></a>
+<a name="%E6%9F%A5%E8%AF%A2%E7%A5%A8%E5%8A%A1%E4%BF%A1%E6%81%AF%EF%BC%88testing%EF%BC%89"></a>
 ### 查询票务信息（Testing）
 
 Request URI:
