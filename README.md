@@ -1,8 +1,6 @@
 # Dashboard
 
-Records of development progress.
-
-[课程网站][course_website] [前端源码][client_source] [后端源码][server_source]
+Records of AwesomeTickets development progress.
 
 ## Team & Division
 
