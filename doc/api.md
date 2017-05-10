@@ -617,7 +617,7 @@ Response Example:
     "movieOnShowId": 115,
     "seats": [[7, 8], [7, 9], [7, 10], [7, 11]],
     "phoneNum": "13511112222",
-    "ticketCode": "123456789"
+    "ticketCode": "1234567890"
 }
 ```
 
