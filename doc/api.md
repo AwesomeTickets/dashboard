@@ -64,7 +64,7 @@
 |203|403|手机号超出每日购票次数上限。|ErrorStatus.PURCHASE_UNAVAILABLE|
 |300|400|取票手机号不匹配。|ErrorStatus.PHONE_MISMATCH|
 |301|400|取票码不存在。|ErrorStatus.TICKET_CODE_NOT_FOUND|
-|400|400|票已经被取出，不能再次取票。|ErrorStatus.TICKET_CHECKED|
+|302|400|票已经被取出，不能再次取票。|ErrorStatus.TICKET_CHECKED|
 
 <a name="电影类"></a>
 ## 电影类
