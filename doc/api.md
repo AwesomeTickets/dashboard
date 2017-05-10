@@ -60,6 +60,7 @@
 |102|400|不匹配的短信验证码。|ErrorStatus.SMS_MISMATCH|
 |200|400|座位已被购买，请更换其它座位。|ErrorStatus.SEAT_UNAVAILABLE|
 |201|400|座位不存在，请检查座位行列号是否输入正确。|ErrorStatus.SEAT_NOT_FOUND|
+|202|400|手机号未验证。|ErrorStatus.PHONE_NOT_VERIFIED|
 |300|400|取票手机号不匹配。|ErrorStatus.PHONE_MISMATCH|
 |301|400|取票码不存在。|ErrorStatus.TICKET_CODE_NOT_FOUND|
 |400|400|票已经被取出，不能再次取票。|ErrorStatus.TICKET_CHECKED|
