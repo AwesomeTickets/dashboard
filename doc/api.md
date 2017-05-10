@@ -55,16 +55,16 @@
 |:----:|:-----------:|-------------|----------|
 |0|400|参数错误，与 400 状态码含义一致。|ErrorStatus.BAD_REQUEST|
 |1|404|资源未找到，与 404 状态码含义一致。|ErrorStatus.RESOURCE_NOT_FOUND|
-|100|400|手机号格式错误，手机号长度要求为11位。|ErrorStatus.PHONE_INVALID_FORMAT|
+|100|400|手机号格式错误，手机号长度要求为 11 位并符合国内手机号规范。|ErrorStatus.PHONE_INVALID_FORMAT|
 |101|400|短信验证码发送失败，两次发送间隔至少要 60 秒。|ErrorStatus.SMS_SEND_FAIL|
 |102|400|不匹配的短信验证码。|ErrorStatus.SMS_MISMATCH|
 |200|400|座位已被购买，请更换其它座位。|ErrorStatus.SEAT_UNAVAILABLE|
 |201|400|座位不存在，请检查座位行列号是否输入正确。|ErrorStatus.SEAT_NOT_FOUND|
 |202|400|手机号未验证。|ErrorStatus.PHONE_NOT_VERIFIED|
+|203|403|手机号超出每日购票次数上限。|ErrorStatus.PURCHASE_UNAVAILABLE|
 |300|400|取票手机号不匹配。|ErrorStatus.PHONE_MISMATCH|
 |301|400|取票码不存在。|ErrorStatus.TICKET_CODE_NOT_FOUND|
 |400|400|票已经被取出，不能再次取票。|ErrorStatus.TICKET_CHECKED|
-|500|403|手机号超出每日购票次数上限。|ErrorStatus.PURCHASE_UNAVAILABLE|
 
 <a name="电影类"></a>
 ## 电影类
