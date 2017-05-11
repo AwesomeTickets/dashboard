@@ -85,6 +85,7 @@ Records of AwesomeTickets development progress.
 ## Iteration #3
 
 - [UI 资源](https://pan.baidu.com/s/1bObnjw) 密码: 25sk
+- [UI 资源(3.1)](https://pan.baidu.com/s/1mifsrVE) 密码: fnak
 
 ### Week #8 (05/01/2017)
 
