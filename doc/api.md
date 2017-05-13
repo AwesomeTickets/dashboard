@@ -23,12 +23,12 @@
 - [座位类](#座位类)
     - [获取不可用座位信息](#获取不可用座位信息)
 - [短信类](#短信类)
-    - [发送验证码短信（developing）](#发送验证码短信（developing）)
-    - [验证手机号（developing）](#验证手机号（developing）)
+    - [发送验证码短信](#发送验证码短信)
+    - [验证手机号](#验证手机号)
 - [票务类](#票务类)
-    - [购票（developing）](#购票（developing）)
-    - [取票（developing）](#取票（developing）)
-    - [查询票务信息（developing）](#查询票务信息（developing）)
+    - [购票](#购票)
+    - [取票](#取票)
+    - [查询票务信息](#查询票务信息)
 
 <!-- /MarkdownTOC -->
 
@@ -522,8 +522,8 @@ Response Example:
 <a name="短信类"></a>
 ## 短信类
 
-<a name="发送验证码短信（developing）"></a>
-### 发送验证码短信（developing）
+<a name="发送验证码短信"></a>
+### 发送验证码短信
 
 Request URI:
 
@@ -551,8 +551,8 @@ Response Example:
 }
 ```
 
-<a name="验证手机号（developing）"></a>
-### 验证手机号（developing）
+<a name="验证手机号"></a>
+### 验证手机号
 
 Request URI:
 
@@ -584,8 +584,8 @@ Response Example:
 <a name="票务类"></a>
 ## 票务类
 
-<a name="购票（developing）"></a>
-### 购票（developing）
+<a name="购票"></a>
+### 购票
 
 Request URI:
 
@@ -621,8 +621,8 @@ Response Example:
 }
 ```
 
-<a name="取票（developing）"></a>
-### 取票（developing）
+<a name="取票"></a>
+### 取票
 
 Request URI:
 
@@ -655,8 +655,8 @@ Response Example:
 }
 ```
 
-<a name="查询票务信息（developing）"></a>
-### 查询票务信息（developing）
+<a name="查询票务信息"></a>
+### 查询票务信息
 
 Request URI:
 
