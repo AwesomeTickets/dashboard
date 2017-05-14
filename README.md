@@ -103,6 +103,14 @@ Records of AwesomeTickets development progress.
     - 前端：选座页面水平滚动条；购票与取票页面
     - 后端：Web 接口
 
+### Week #10 (05/15/2017)
+
+- 需求分析：无
+- 概要设计 & 详细设计：确定下一轮迭代的 Web 接口以及数据库设计
+- 编码 & 测试：
+    - 前端：结束购票与取票页面开发
+    - 后端：结束 Web 接口开发
+
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
 [db]:               https://github.com/AwesomeTickets/Database
