@@ -661,7 +661,7 @@ Response Example:
 Request URI:
 
 ```
-GET /resource/ticket/info
+POST /resource/ticket/info
 ```
 
 Request Parameters:
