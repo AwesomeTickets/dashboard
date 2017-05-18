@@ -835,7 +835,7 @@ Response Properties:
 |----------|-------------|------|
 |movieOnShowId|电影排期 id|int|
 |seats|与[购票](#购票)接口一致|json array|
-|valid|票是否可用（未被取出）|boolean|
+|valid|True: 该影票未被取出 / False: 该影票已被取出|boolean|
 |phoneNum|购票手机号|string|
 
 Response Example:
