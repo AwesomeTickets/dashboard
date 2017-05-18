@@ -49,3 +49,19 @@
     - selectSeat_screen
     
 ***
+
+### 2017.5.18
+- 购票 UI 更新
+
+- 购票交互流程更新
+
+- 新增 loading gif：
+    - loadind
+    - loading_gif
+    
+- 完成 #4：
+    - 新增注册登录页面
+    - 新增账户购票历史记录
+    
+***
+
