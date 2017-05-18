@@ -4,7 +4,7 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>460</x>
+      <x>550</x>
       <y>70</y>
       <w>250</w>
       <h>40</h>
@@ -15,7 +15,7 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>460</x>
+      <x>550</x>
       <y>160</y>
       <w>250</w>
       <h>40</h>
@@ -26,7 +26,7 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>560</x>
+      <x>650</x>
       <y>250</y>
       <w>40</w>
       <h>40</h>
@@ -37,30 +37,30 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>760</x>
+      <x>850</x>
       <y>250</y>
       <w>230</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>100 PHONE_INVALID_FORMAT
+    <panel_attributes>PHONE_INVALID_FORMAT
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>420</x>
+      <x>550</x>
       <y>530</y>
-      <w>330</w>
+      <w>260</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>检查手机号是否验证（同时获得user_id）</panel_attributes>
+    <panel_attributes>检查用户是否存在</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>560</x>
+      <x>650</x>
       <y>630</y>
       <w>40</w>
       <h>40</h>
@@ -71,19 +71,19 @@ bg=red</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>760</x>
+      <x>850</x>
       <y>630</y>
       <w>230</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>202 PHONE_NOT_VERIFIED
+    <panel_attributes>USER_NOT_FOUND
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>100</y>
       <w>30</w>
       <h>80</h>
@@ -94,7 +94,7 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>190</y>
       <w>30</w>
       <h>80</h>
@@ -105,18 +105,18 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>280</y>
       <w>30</w>
-      <h>90</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
+      <x>680</x>
       <y>260</y>
       <w>190</w>
       <h>30</h>
@@ -127,7 +127,7 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>560</y>
       <w>30</w>
       <h>90</h>
@@ -138,7 +138,7 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
+      <x>680</x>
       <y>640</y>
       <w>190</w>
       <h>30</h>
@@ -149,7 +149,7 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>660</y>
       <w>30</w>
       <h>80</h>
@@ -160,8 +160,8 @@ bg=red</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>460</x>
-      <y>920</y>
+      <x>550</x>
+      <y>1070</y>
       <w>250</w>
       <h>40</h>
     </coordinates>
@@ -171,8 +171,8 @@ bg=red</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>560</x>
-      <y>1010</y>
+      <x>650</x>
+      <y>1160</y>
       <w>40</w>
       <h>40</h>
     </coordinates>
@@ -182,20 +182,20 @@ bg=red</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>760</x>
-      <y>1010</y>
+      <x>850</x>
+      <y>1160</y>
       <w>230</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>200 SEAT_UNAVAILABLE
+    <panel_attributes>SEAT_UNAVAILABLE
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
-      <y>1020</y>
+      <x>680</x>
+      <y>1170</y>
       <w>190</w>
       <h>30</h>
     </coordinates>
@@ -205,8 +205,8 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>950</y>
+      <x>660</x>
+      <y>1100</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
@@ -216,30 +216,29 @@ bg=red</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>460</x>
-      <y>1100</y>
+      <x>550</x>
+      <y>1250</y>
       <w>250</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>生成取票码code和digest</panel_attributes>
+    <panel_attributes>生成取票码(code)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>380</x>
-      <y>1270</y>
+      <x>470</x>
+      <y>1320</y>
       <w>400</w>
-      <h>80</h>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>插入 Ticket(user_id, valid=true, digest) 记录
-得到 ticket_id</panel_attributes>
+    <panel_attributes>插入 Ticket(user_id, valid=true, code) 记录</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>460</x>
+      <x>550</x>
       <y>1390</y>
       <w>260</w>
       <h>40</h>
@@ -250,18 +249,7 @@ bg=red</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>460</x>
-      <y>1190</y>
-      <w>250</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>插入 TicketCode(code) 记录</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLState</id>
-    <coordinates>
-      <x>460</x>
+      <x>550</x>
       <y>1470</y>
       <w>260</w>
       <h>40</h>
@@ -272,8 +260,8 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>1040</y>
+      <x>660</x>
+      <y>1190</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
@@ -283,40 +271,18 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>1130</y>
+      <x>660</x>
+      <y>1350</y>
       <w>30</w>
-      <h>80</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>1220</y>
-      <w>30</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>570</x>
-      <y>1340</y>
-      <w>30</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>1420</y>
       <w>30</w>
       <h>70</h>
@@ -327,7 +293,7 @@ bg=red</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>0</y>
       <w>20</w>
       <h>20</h>
@@ -338,7 +304,7 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>10</y>
       <w>30</w>
       <h>80</h>
@@ -349,8 +315,8 @@ bg=red</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>570</x>
-      <y>1550</y>
+      <x>660</x>
+      <y>1540</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -360,40 +326,18 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>1500</y>
       <w>30</w>
-      <h>70</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
-      <y>1020</y>
-      <w>320</w>
-      <h>490</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;470.0;300.0;470.0;300.0;10.0;280.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>710</x>
-      <y>640</y>
-      <w>340</w>
-      <h>870</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;850.0;320.0;850.0;320.0;10.0;280.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>710</x>
+      <x>800</x>
       <y>260</y>
       <w>360</w>
       <h>1250</h>
@@ -404,7 +348,7 @@ bg=red</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>430</x>
+      <x>520</x>
       <y>720</y>
       <w>330</w>
       <h>40</h>
@@ -415,7 +359,7 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>750</y>
       <w>30</w>
       <h>90</h>
@@ -426,7 +370,7 @@ bg=red</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>560</x>
+      <x>650</x>
       <y>820</y>
       <w>40</w>
       <h>40</h>
@@ -437,30 +381,30 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>850</y>
       <w>30</w>
-      <h>90</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>760</x>
+      <x>850</x>
       <y>820</y>
       <w>230</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>203 PURCHASE_UNAVAILABLE
+    <panel_attributes>PURCHASE_UNAVAILABLE
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
+      <x>680</x>
       <y>830</y>
       <w>190</w>
       <h>30</h>
@@ -469,21 +413,10 @@ bg=red</panel_attributes>
     <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>710</x>
-      <y>830</y>
-      <w>330</w>
-      <h>680</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;660.0;310.0;660.0;310.0;10.0;280.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLState</id>
     <coordinates>
-      <x>460</x>
-      <y>350</y>
+      <x>550</x>
+      <y>340</y>
       <w>250</w>
       <h>40</h>
     </coordinates>
@@ -493,7 +426,7 @@ bg=red</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>560</x>
+      <x>650</x>
       <y>440</y>
       <w>40</w>
       <h>40</h>
@@ -504,18 +437,18 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>380</y>
+      <x>660</x>
+      <y>370</y>
       <w>30</w>
-      <h>80</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>660</x>
       <y>470</y>
       <w>30</w>
       <h>80</h>
@@ -526,19 +459,19 @@ bg=red</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>760</x>
+      <x>850</x>
       <y>440</y>
       <w>230</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>201 SEAT_NOT_FOUND
+    <panel_attributes>BAD_REQUEST
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
+      <x>680</x>
       <y>450</y>
       <w>190</w>
       <h>30</h>
@@ -549,12 +482,134 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
-      <y>450</y>
-      <w>350</w>
-      <h>1060</h>
+      <x>660</x>
+      <y>1280</y>
+      <w>30</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;1040.0;330.0;1040.0;330.0;10.0;280.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1070</x>
+      <y>450</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1070</x>
+      <y>640</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1070</x>
+      <y>830</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1070</x>
+      <y>1170</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>550</x>
+      <y>900</y>
+      <w>250</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>检查座位是否存在</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>650</x>
+      <y>980</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>930</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>850</x>
+      <y>980</y>
+      <w>230</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>SEAT_NOT_FOUND
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>990</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1070</x>
+      <y>990</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>1010</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
