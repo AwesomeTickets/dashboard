@@ -23,10 +23,14 @@
 - [座位类](#座位类)
     - [获取不可用座位信息](#获取不可用座位信息)
 - [短信类](#短信类)
-    - [发送验证码短信](#发送验证码短信)
-    - [验证手机号](#验证手机号)
+    - [获取短信验证码](#获取短信验证码)
+    - [~~验证手机号~~](#~~验证手机号~~)
+- [用户类](#用户类)
+    - [注册（developing）](#注册（developing）)
+    - [登录（developing）](#登录（developing）)
+    - [登出（developing）](#登出（developing）)
 - [票务类](#票务类)
-    - [购票](#购票)
+    - [购票（developing）](#购票（developing）)
     - [取票](#取票)
     - [查询票务信息](#查询票务信息)
 
@@ -55,16 +59,20 @@
 |:----:|:-----------:|-------------|----------|
 |0|400|参数错误，与 400 状态码含义一致。|ErrorStatus.BAD_REQUEST|
 |1|404|资源未找到，与 404 状态码含义一致。|ErrorStatus.RESOURCE_NOT_FOUND|
-|100|400|手机号格式错误，手机号长度要求为 11 位并符合国内手机号规范。|ErrorStatus.PHONE_INVALID_FORMAT|
+|100|400|手机号格式错误（要求长度为 11 位并且符合国内手机号规范）。|ErrorStatus.PHONE_INVALID_FORMAT|
 |101|400|短信验证码发送失败，两次发送间隔至少要 60 秒。|ErrorStatus.SMS_SEND_FAIL|
 |102|400|不匹配的短信验证码。|ErrorStatus.SMS_MISMATCH|
 |200|400|座位已被购买，请更换其它座位。|ErrorStatus.SEAT_UNAVAILABLE|
 |201|400|座位不存在，请检查座位行列号是否输入正确。|ErrorStatus.SEAT_NOT_FOUND|
-|202|400|手机号未验证。|ErrorStatus.PHONE_NOT_VERIFIED|
-|203|403|手机号超出每日购票次数上限。|ErrorStatus.PURCHASE_UNAVAILABLE|
+|202|400|用户不存在，请检查用户是否注册|ErrorStatus.USER_NOT_FOUND|
+|203|403|用户超出每日购票次数上限。|ErrorStatus.PURCHASE_UNAVAILABLE|
 |300|400|取票手机号不匹配。|ErrorStatus.PHONE_MISMATCH|
 |301|400|取票码不存在。|ErrorStatus.TICKET_CODE_NOT_FOUND|
 |302|400|票已经被取出，不能再次取票。|ErrorStatus.TICKET_CHECKED|
+|400|400|密码格式错误（要求长度至少为 6 位并且必须含有字母和数字）。|ErrorStatus.PASSWORD_INVALID_FORMAT|
+|401|403|手机号已被注册，请更换其它手机号。|ErrorStatus.PHONE_REGISTERED|
+|402|403|密码不匹配。|ErrorStatus.PASSWORD_MISMATCH|
+|403|403|会话不存在，请检查 cookie 中是否附带了正确的 session_id。|ErrorStatus.SESSION_NOT_FOUND|
 
 <a name="电影类"></a>
 ## 电影类
@@ -522,8 +530,8 @@ Response Example:
 <a name="短信类"></a>
 ## 短信类
 
-<a name="发送验证码短信"></a>
-### 发送验证码短信
+<a name="获取短信验证码"></a>
+### 获取短信验证码
 
 Request URI:
 
@@ -551,8 +559,8 @@ Response Example:
 }
 ```
 
-<a name="验证手机号"></a>
-### 验证手机号
+<a name="~~验证手机号~~"></a>
+### ~~验证手机号~~
 
 Request URI:
 
@@ -581,11 +589,108 @@ Response Example:
 }
 ```
 
+<a name="用户类"></a>
+## 用户类
+
+<a name="注册（developing）"></a>
+### 注册（developing）
+
+Request URI:
+
+```
+POST /resource/user
+```
+
+Request Parameters:
+
+| Param | Description | Type |
+|-------|-------------|------|
+|phoneNum|用户手机号|string|
+|password|用户密码|string|
+|smsCode|短信验证码，通过[获取短信验证码](#获取短信验证码)接口获得|string|
+
+Response Properties:
+
+| Property | Description | Type |
+|----------|-------------|------|
+|phoneNum|注册成功的手机号|string|
+
+Response Example:
+
+```json
+{
+    "phoneNum": "13511112222"
+}
+```
+
+<a name="登录（developing）"></a>
+### 登录（developing）
+
+Request URI:
+
+```
+POST /resource/session
+```
+
+Request Parameters:
+
+| Param | Description | Type |
+|-------|-------------|------|
+|phoneNum|用户手机号|string|
+|password|用户密码|string|
+
+Response Properties:
+
+| Property | Description | Type |
+|----------|-------------|------|
+|phoneNum|登录成功的手机号|string|
+
+（Response 的 cookie 中将带有 session_id）
+
+Response Example:
+
+```json
+{
+    "phoneNum": "13511112222"
+}
+```
+
+<a name="登出（developing）"></a>
+### 登出（developing）
+
+Request URI:
+
+```
+POST /resource/session/drop
+```
+
+Request Parameters:
+
+| Param | Description | Type |
+|-------|-------------|------|
+|phoneNum|用户手机号|string|
+
+（Request 的 cookie 中必须有正确的 session_id）
+
+Response Properties:
+
+| Property | Description | Type |
+|----------|-------------|------|
+|phoneNum|登出成功的手机号|string|
+
+Response Example:
+
+```json
+{
+    "phoneNum": "13511112222"
+}
+```
+
 <a name="票务类"></a>
 ## 票务类
 
-<a name="购票"></a>
-### 购票
+<a name="购票（developing）"></a>
+### 购票（developing）
 
 Request URI:
 
@@ -598,8 +703,10 @@ Request Parameters:
 | Param | Description | Type |
 |-------|-------------|------|
 |movieOnShowId|电影排期 id|int|
-|phoneNum|已验证的手机号|string|
+|phoneNum|用户手机号|string|
 |seats|座位行列号序列，可提交座位数在1~4之间（例：`seats=5,2,6,3`表示购买5排2座和6排3座两张票）|int array|
+
+（Request 的 cookie 中必须带有正确的 session_id，即此功能必须在已登录的情况下使用）
 
 Response Properties:
 
