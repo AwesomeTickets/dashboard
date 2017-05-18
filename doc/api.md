@@ -29,6 +29,7 @@
     - [注册（developing）](#注册（developing）)
     - [登录（developing）](#登录（developing）)
     - [登出（developing）](#登出（developing）)
+    - [获取购票历史（developing）](#获取购票历史（developing）)
 - [票务类](#票务类)
     - [购票（developing）](#购票（developing）)
     - [取票](#取票)
@@ -670,7 +671,7 @@ Request Parameters:
 |-------|-------------|------|
 |phoneNum|用户手机号|string|
 
-（Request 的 cookie 中必须有正确的 session_id）
+（Request 的 cookie 中必须带有正确的 session_id）
 
 Response Properties:
 
@@ -683,6 +684,56 @@ Response Example:
 ```json
 {
     "phoneNum": "13511112222"
+}
+```
+
+<a name="获取购票历史（developing）"></a>
+### 获取购票历史（developing）
+
+Request URI:
+
+```
+GET /resource/user/:phoneNum/ticket
+```
+
+Request Parameters:
+
+| Param | Description | Type |
+|-------|-------------|------|
+|phoneNum|用户手机号|string|
+
+（Request 的 cookie 中必须带有正确的 session_id）
+
+Response Properties:
+
+| Property | Description | Type |
+|----------|-------------|------|
+|count|该用户购买过的影票张数|int|
+|data|购买过的影票信息集合|json array|
+|data.code|取票码|string|
+|data.valid|True: 该影票未被取出 / False: 该影票已被取出|boolean|
+|data.seats|与[购票](#购票)接口一致|json array|
+|data.movieOnShowId|该影票对应的电影排期 id|int|
+
+Response Example:
+
+```json
+{
+    "count": 2,
+    "data": [
+        {
+            "code": "1111111111",
+            "valid": true,
+            "seats": [[7, 8], [7, 9], [7, 10], [7, 11]],
+            "movieOnShowId": 111
+        },
+        {
+            "code": "2222222222",
+            "valid": false,
+            "seats": [[8, 8], [8, 9], [8, 10], [8, 11]],
+            "movieOnShowId": 222
+        }
+    ]
 }
 ```
 
@@ -706,14 +757,14 @@ Request Parameters:
 |phoneNum|用户手机号|string|
 |seats|座位行列号序列，可提交座位数在1~4之间（例：`seats=5,2,6,3`表示购买5排2座和6排3座两张票）|int array|
 
-（Request 的 cookie 中必须带有正确的 session_id，即此功能必须在已登录的情况下使用）
+（Request 的 cookie 中必须带有正确的 session_id）
 
 Response Properties:
 
 | Property | Description | Type |
 |----------|-------------|------|
 |movieOnShowId|电影排期 id|int|
-|seats|购买的座位集合，集合内每个元素是一个长度为2的数组，分别表示座位行号和列号|json array|
+|seats|（购买成功的）座位集合，集合内每个元素是一个长度为2的数组，分别表示座位行号和列号|json array|
 |phoneNum|购票手机号|string|
 |ticketCode|取票码|string|
 
@@ -749,7 +800,7 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |movieOnShowId|电影排期 id|int|
-|seats|购买的座位集合，集合内每个元素是一个长度为2的数组，分别表示座位行号和列号|json array|
+|seats|与[购票](#购票)接口一致|json array|
 |phoneNum|购票手机号|string|
 
 Response Example:
@@ -783,7 +834,7 @@ Response Properties:
 | Property | Description | Type |
 |----------|-------------|------|
 |movieOnShowId|电影排期 id|int|
-|seats|购买的座位集合，集合内每个元素是一个长度为2的数组，分别表示座位行号和列号|json array|
+|seats|与[购票](#购票)接口一致|json array|
 |valid|票是否可用（未被取出）|boolean|
 |phoneNum|购票手机号|string|
 
