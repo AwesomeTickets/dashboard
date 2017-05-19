@@ -109,7 +109,7 @@ Records of AwesomeTickets development progress.
 - 概要设计 & 详细设计：确定下一轮迭代的 Web 接口以及数据库设计
 - 编码 & 测试：
     - 前端：结束购票与取票页面开发
-    - 后端：结束 Web 接口开发
+    - 后端：结束 Web 接口开发；将网页服务器与 Service 服务器分离
 
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
