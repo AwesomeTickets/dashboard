@@ -29,6 +29,7 @@
     - [注册（developing）](#注册（developing）)
     - [登录（developing）](#登录（developing）)
     - [登出（developing）](#登出（developing）)
+    - [检查 session 是否失效（developing）](#检查-session-是否失效（developing）)
     - [获取购票历史（developing）](#获取购票历史（developing）)
 - [票务类](#票务类)
     - [购票（developing）](#购票（developing）)
@@ -684,6 +685,31 @@ Response Example:
 ```json
 {
     "phoneNum": "13511112222"
+}
+```
+
+<a name="检查-session-是否失效（developing）"></a>
+### 检查 session 是否失效（developing）
+
+Request URI:
+
+```
+GET /resource/session
+```
+
+Request 的 cookie 中必须带有正确的 session_id。
+
+Response Properties:
+
+| Property | Description | Type |
+|----------|-------------|------|
+|expire|session 是否失效|boolean|
+
+Response Example:
+
+```json
+{
+    "expire": true
 }
 ```
 
