@@ -121,6 +121,8 @@ Records of AwesomeTickets development progress.
 
 ### Iteration 4
 
+- [UI 资源](https://pan.baidu.com/s/1geFeIob) 密码: wap5
+
 #### Week 11 (05/22/2017)
 
 - 需求分析：无
