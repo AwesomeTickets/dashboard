@@ -694,7 +694,7 @@ Response Example:
 Request URI:
 
 ```
-GET /resource/session
+GET /resource/session/check
 ```
 
 Request 的 cookie 中必须带有正确的 session_id。
