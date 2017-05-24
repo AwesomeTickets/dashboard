@@ -584,6 +584,8 @@ Response Example:
 <a name="~~验证手机号~~"></a>
 ### ~~验证手机号~~
 
+**此接口将在完成用户类 API 后删除。**
+
 Request URI:
 
 ```
