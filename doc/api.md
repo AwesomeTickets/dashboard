@@ -4,6 +4,7 @@
 
 - [返回状态说明](#返回状态说明)
     - [错误码](#错误码)
+- [Cookie 说明](#cookie-说明)
 - [电影类](#电影类)
     - [获取电影信息](#获取电影信息)
     - [获取正在上映电影列表](#获取正在上映电影列表)
@@ -75,6 +76,25 @@
 |401|403|手机号已被注册，请更换其它手机号。|ErrorStatus.PHONE_REGISTERED|
 |402|403|密码不匹配。|ErrorStatus.PASSWORD_MISMATCH|
 |403|403|会话不存在，请检查 cookie 中是否附带了正确的 session_id。|ErrorStatus.SESSION_NOT_FOUND|
+
+<a name="cookie-说明"></a>
+## Cookie 说明
+
+需要使用 Cookie 的 API 在对应的 API 说明中均有标识，Response 中的 Cookie 具有如下形式：
+
+```
+HTTP/1.1 200 OK
+...
+Set-Cookie: SESSION=b464fe82-4292-4292-9334-06ed403f3fbf; Expires=some-date; Path=/resource
+```
+
+Request 中的 Cookie 要求具有如下形式：
+
+```
+METHOD URI http/1.1
+...
+Cookie: SESSION=b464fe82-4292-4292-9334-06ed403f3fbf
+```
 
 <a name="电影类"></a>
 ## 电影类
@@ -617,6 +637,8 @@ Response Properties:
 |----------|-------------|------|
 |phoneNum|注册成功的手机号|string|
 
+（该 Response 带有 Cookie，见 [Cookie 说明](#cookie-说明)）
+
 Response Example:
 
 ```json
@@ -647,7 +669,7 @@ Response Properties:
 |----------|-------------|------|
 |phoneNum|登录成功的手机号|string|
 
-（Response 的 cookie 中将带有 session_id）
+（该 Response 带有 Cookie，见 [Cookie 说明](#cookie-说明)）
 
 Response Example:
 
@@ -672,7 +694,7 @@ Request Parameters:
 |-------|-------------|------|
 |phoneNum|用户手机号|string|
 
-（Request 的 cookie 中必须带有正确的 session_id）
+（该 Request 必须带有 Cookie，见 [Cookie 说明](#cookie-说明)）
 
 Response Properties:
 
@@ -697,7 +719,7 @@ Request URI:
 GET /resource/session/check
 ```
 
-Request 的 cookie 中必须带有正确的 session_id。
+（该 Request 必须带有 Cookie，见 [Cookie 说明](#cookie-说明)）
 
 Response Properties:
 
@@ -728,7 +750,7 @@ Request Parameters:
 |-------|-------------|------|
 |phoneNum|用户手机号|string|
 
-（Request 的 cookie 中必须带有正确的 session_id）
+（该 Request 必须带有 Cookie，见 [Cookie 说明](#cookie-说明)）
 
 Response Properties:
 
@@ -783,7 +805,7 @@ Request Parameters:
 |phoneNum|用户手机号|string|
 |seats|座位行列号序列，可提交座位数在1~4之间（例：`seats=5,2,6,3`表示购买5排2座和6排3座两张票）|int array|
 
-（Request 的 cookie 中必须带有正确的 session_id）
+（该 Request 必须带有 Cookie，见 [Cookie 说明](#cookie-说明)）
 
 Response Properties:
 
