@@ -80,7 +80,7 @@
 <a name="cookie-说明"></a>
 ## Cookie 说明
 
-需要使用 Cookie 的 API 在对应的 API 说明中均有标识，Response 中的 Cookie 具有如下形式：
+需要使用 Cookie 的 API 在对应的 API 说明中均有标识，Response header 中的 Cookie 具有如下形式：
 
 ```
 HTTP/1.1 200 OK
@@ -88,7 +88,7 @@ HTTP/1.1 200 OK
 Set-Cookie: SESSION=b464fe82-4292-4292-9334-06ed403f3fbf; Expires=some-date; Path=/resource
 ```
 
-Request 中的 Cookie 要求具有如下形式：
+Request header 中的 Cookie 要求具有如下形式：
 
 ```
 METHOD URI http/1.1
