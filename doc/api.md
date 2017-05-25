@@ -25,7 +25,7 @@
     - [获取不可用座位信息](#获取不可用座位信息)
 - [短信类](#短信类)
     - [获取短信验证码](#获取短信验证码)
-    - [~~验证手机号~~](#~~验证手机号~~)
+    - [验证手机号](#验证手机号)
 - [用户类](#用户类)
     - [注册（developing）](#注册（developing）)
     - [登录（developing）](#登录（developing）)
@@ -581,10 +581,8 @@ Response Example:
 }
 ```
 
-<a name="~~验证手机号~~"></a>
-### ~~验证手机号~~
-
-**此接口将在完成用户类 API 后删除。**
+<a name="验证手机号"></a>
+### 验证手机号
 
 Request URI:
 
@@ -743,7 +741,7 @@ Response Example:
 Request URI:
 
 ```
-GET /resource/user/:phoneNum/ticket
+GET /resource/user/:phoneNum/ticket/history
 ```
 
 Request Parameters:
