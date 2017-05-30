@@ -27,13 +27,13 @@
     - [获取短信验证码](#获取短信验证码)
     - [验证手机号](#验证手机号)
 - [用户类](#用户类)
-    - [注册（developing）](#注册（developing）)
-    - [登录（developing）](#登录（developing）)
-    - [登出（developing）](#登出（developing）)
-    - [检查 session 是否失效（developing）](#检查-session-是否失效（developing）)
-    - [获取购票历史（developing）](#获取购票历史（developing）)
+    - [注册](#注册)
+    - [登录](#登录)
+    - [登出](#登出)
+    - [检查 session 是否失效](#检查-session-是否失效)
+    - [获取购票历史](#获取购票历史)
 - [票务类](#票务类)
-    - [购票（developing）](#购票（developing）)
+    - [购票](#购票)
     - [取票](#取票)
     - [查询票务信息](#查询票务信息)
 
@@ -614,8 +614,8 @@ Response Example:
 <a name="用户类"></a>
 ## 用户类
 
-<a name="注册（developing）"></a>
-### 注册（developing）
+<a name="注册"></a>
+### 注册
 
 Request URI:
 
@@ -647,8 +647,8 @@ Response Example:
 }
 ```
 
-<a name="登录（developing）"></a>
-### 登录（developing）
+<a name="登录"></a>
+### 登录
 
 Request URI:
 
@@ -679,8 +679,8 @@ Response Example:
 }
 ```
 
-<a name="登出（developing）"></a>
-### 登出（developing）
+<a name="登出"></a>
+### 登出
 
 Request URI:
 
@@ -710,8 +710,8 @@ Response Example:
 }
 ```
 
-<a name="检查-session-是否失效（developing）"></a>
-### 检查 session 是否失效（developing）
+<a name="检查-session-是否失效"></a>
+### 检查 session 是否失效
 
 Request URI:
 
@@ -735,8 +735,8 @@ Response Example:
 }
 ```
 
-<a name="获取购票历史（developing）"></a>
-### 获取购票历史（developing）
+<a name="获取购票历史"></a>
+### 获取购票历史
 
 Request URI:
 
@@ -788,8 +788,8 @@ Response Example:
 <a name="票务类"></a>
 ## 票务类
 
-<a name="购票（developing）"></a>
-### 购票（developing）
+<a name="购票"></a>
+### 购票
 
 Request URI:
 
