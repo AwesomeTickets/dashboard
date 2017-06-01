@@ -28,6 +28,7 @@
     - [验证手机号](#验证手机号)
 - [用户类](#用户类)
     - [注册](#注册)
+    - [检查用户是否注册](#检查用户是否注册)
     - [登录](#登录)
     - [登出](#登出)
     - [检查 session 是否失效](#检查-session-是否失效)
@@ -644,6 +645,35 @@ Response Example:
 ```json
 {
     "phoneNum": "13511112222"
+}
+```
+
+<a name="检查用户是否注册"></a>
+### 检查用户是否注册
+
+Request URI:
+
+```
+GET /resource/user/:phoneNum
+```
+
+Request Parameters:
+
+| Param | Description | Type |
+|-------|-------------|------|
+|phoneNum|用户手机号|string|
+
+Response Properties:
+
+| Property | Description | Type |
+|----------|-------------|------|
+|register|该用户是否注册|boolean|
+
+Response Example:
+
+```json
+{
+    "register": true
 }
 ```
 
