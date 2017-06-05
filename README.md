@@ -138,6 +138,14 @@ Records of AwesomeTickets development progress.
     - 前端：用户系统界面开发
     - 后端：完成分布式部署
 
+#### Week 13 (06/05/2017)
+
+- 需求分析：无
+- 概要设计 & 详细设计：无
+- 编码 & 测试：
+    - 前端：完成此轮迭代开发工作
+    - 后端：完成此轮迭代开发工作；尝试搭建 Jenkins 环境
+
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
 [db]:               https://github.com/AwesomeTickets/Database
