@@ -69,7 +69,7 @@ HTTP</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>740</x>
-      <y>360</y>
+      <y>330</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -82,7 +82,7 @@ Spring REST</panel_attributes>
     <id>UMLDeployment</id>
     <coordinates>
       <x>720</x>
-      <y>270</y>
+      <y>240</y>
       <w>230</w>
       <h>180</h>
     </coordinates>
@@ -95,19 +95,19 @@ Service Server 1
     <id>Relation</id>
     <coordinates>
       <x>530</x>
-      <y>370</y>
+      <y>340</y>
       <w>210</w>
-      <h>210</h>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=-
 HTTP</panel_attributes>
-    <additional_attributes>10.0;190.0;190.0;10.0</additional_attributes>
+    <additional_attributes>10.0;220.0;190.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>1100</x>
-      <y>340</y>
+      <x>1130</x>
+      <y>290</y>
       <w>150</w>
       <h>100</h>
     </coordinates>
@@ -167,13 +167,20 @@ HTTP</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>910</x>
-      <y>380</y>
+      <y>330</y>
       <w>230</w>
-      <h>260</h>
+      <h>310</h>
     </coordinates>
     <panel_attributes>lt=-
-JDBC</panel_attributes>
-    <additional_attributes>10.0;10.0;210.0;240.0</additional_attributes>
+
+
+
+    
+     
+      
+       
+       JDBC</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;290.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -191,25 +198,27 @@ JDBC</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>910</x>
-      <y>370</y>
-      <w>210</w>
-      <h>40</h>
+      <y>320</y>
+      <w>240</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
+TCP
 </panel_attributes>
-    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>910</x>
-      <y>380</y>
-      <w>210</w>
-      <h>260</h>
+      <y>330</y>
+      <w>240</w>
+      <h>310</h>
     </coordinates>
     <panel_attributes>lt=-
+   TCP
 </panel_attributes>
-    <additional_attributes>10.0;240.0;190.0;10.0</additional_attributes>
+    <additional_attributes>10.0;290.0;220.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
