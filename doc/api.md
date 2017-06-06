@@ -755,13 +755,13 @@ Response Properties:
 
 | Property | Description | Type |
 |----------|-------------|------|
-|expire|session 是否失效|boolean|
+|phoneNum|session 中存放的用户手机号，空串表示 session 已失效|string|
 
 Response Example:
 
 ```json
 {
-    "expire": true
+    "phoneNum": "18812345678"
 }
 ```
 
