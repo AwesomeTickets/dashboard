@@ -150,9 +150,8 @@ Records of AwesomeTickets development progress.
 
 ### Final
 
-- 编码 & 测试：
-    - 前端：代码优化；完善错误提示信息；添加 favicon
-    - 后端：代码优化
+- 代码优化
+- 完善 UI 错误提示
 
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
