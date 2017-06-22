@@ -146,6 +146,14 @@ Records of AwesomeTickets development progress.
     - 前端：完成此轮迭代开发工作
     - 后端：完成此轮迭代开发工作；尝试搭建 Jenkins 环境
 
+***
+
+### Final iteration
+
+- 编码 & 测试：
+    - 前端：代码优化；完善错误提示信息；添加 favicon
+    - 后端：代码优化
+
 [ui_updates_log]:   ./doc/ui_updates_log.md
 [ui_specification]: ./doc/ui_specification.md
 [db]:               https://github.com/AwesomeTickets/Database
