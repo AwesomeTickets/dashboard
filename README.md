@@ -148,7 +148,7 @@ Records of AwesomeTickets development progress.
 
 ***
 
-### Final iteration
+### Final
 
 - 编码 & 测试：
     - 前端：代码优化；完善错误提示信息；添加 favicon
