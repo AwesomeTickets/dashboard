@@ -1,3 +1,13 @@
+[ui_updates_log]:   ./doc/ui_updates_log.md
+[ui_specification]: ./doc/ui_specification.md
+[db]:               https://github.com/AwesomeTickets/Database
+[api]:              ./doc/api.md
+[course_website]:   http://ss.sysu.edu.cn/~pml/se305/x_Team_ticket.html
+[client_source]:    https://github.com/AwesomeTickets/Tickets-Client
+[server_source]:    https://github.com/AwesomeTickets/Tickets-Server
+[backlog]:          ./doc/backlog.md
+[GitHub_Tutorial]:  http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+
 # Dashboard
 
 Records of AwesomeTickets development progress.
@@ -152,13 +162,3 @@ Records of AwesomeTickets development progress.
 
 - 代码优化
 - 完善 UI 错误提示
-
-[ui_updates_log]:   ./doc/ui_updates_log.md
-[ui_specification]: ./doc/ui_specification.md
-[db]:               https://github.com/AwesomeTickets/Database
-[api]:              ./doc/api.md
-[course_website]:   http://ss.sysu.edu.cn/~pml/se305/x_Team_ticket.html
-[client_source]:    https://github.com/AwesomeTickets/Tickets-Client
-[server_source]:    https://github.com/AwesomeTickets/Tickets-Server
-[backlog]:          ./doc/backlog.md
-[GitHub_Tutorial]:  http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
