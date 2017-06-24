@@ -24,7 +24,7 @@ Records of AwesomeTickets development progress.
 
 - [需求文档][backlog]
 - [Web 接口][api]
-- [UI 规范][ui_specification] 
+- [UI 规范][ui_specification]
 - [UI 更新日志][ui_updates_log]
 
 ## Iterations
