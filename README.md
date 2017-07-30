@@ -160,7 +160,7 @@ Records of AwesomeTickets development progress.
 
 ***
 
-### Final (06/24/2017~)
+### Final
 
 - 代码优化
 - 完善 UI 错误提示
